@@ -37,6 +37,50 @@
 </head>
 <body>
 
+<div class="pw-gate" id="pwGate" style="display:none;">
+  <div class="pw-gate-box">
+    <div class="pw-gate-title">OSR 대시보드</div>
+    <div class="pw-gate-sub">비밀번호를 입력해주세요</div>
+    <input type="password" class="pw-gate-input" id="pwGateInput" placeholder="비밀번호" autocomplete="off">
+    <button class="pw-gate-btn" id="pwGateSubmit">입장</button>
+    <div class="pw-gate-error" id="pwGateError">비밀번호가 올바르지 않습니다.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var HASH = '18610492ae0daab5dddc9b75f91629ba6a4d3aa9c606d962a81018148658155c';
+  function sha256(str){
+    var enc = new TextEncoder().encode(str);
+    return crypto.subtle.digest('SHA-256', enc).then(function(buf){
+      return Array.from(new Uint8Array(buf)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+    });
+  }
+  var authed = localStorage.getItem('osrDashAuthed') === '1';
+  if(!authed){
+    document.documentElement.style.overflow = 'hidden';
+    document.getElementById('pwGate').style.display = 'flex';
+    var input = document.getElementById('pwGateInput');
+    var err = document.getElementById('pwGateError');
+    function trySubmit(){
+      sha256(input.value).then(function(h){
+        if(h === HASH){
+          localStorage.setItem('osrDashAuthed', '1');
+          document.getElementById('pwGate').style.display = 'none';
+          document.documentElement.style.overflow = '';
+        } else {
+          err.style.display = 'block';
+          input.value = '';
+          input.focus();
+        }
+      });
+    }
+    document.getElementById('pwGateSubmit').addEventListener('click', trySubmit);
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter') trySubmit(); });
+    setTimeout(function(){ input.focus(); }, 100);
+  }
+})();
+</script>
+
 <nav>
   <div class="wrap">
     <div class="brand">
