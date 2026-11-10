@@ -8,15 +8,15 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="OSR 운영 라이브 대시보드">
 <meta property="og:description" content="누적 종결처리 건수, 카테고리별(피해/가해/과실) 내역, 미반납 추적까지 실시간으로 확인하세요.">
-<meta property="og:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
+<meta property="og:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://mobillug-osr-dashboard.loca.lt/live.html">
+<meta property="og:url" content="https://kthldj-rgb.github.io/osr-dashboard/live.html">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OSR 운영 라이브 대시보드">
-<meta name="twitter:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
-<link rel="stylesheet" href="/styles.css">
+<meta name="twitter:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
+<link rel="stylesheet" href="styles.css">
 <style>
   .nav-cta{
     padding:8px 16px; border-radius:9px; font-size:12.5px; font-weight:700;
@@ -71,7 +71,7 @@
       <a href="#log">실행 로그</a>
     </div>
     <div style="display:flex; align-items:center; gap:10px;">
-      <a class="nav-cta" href="/">← 프로젝트 소개</a>
+      <a class="nav-cta" href="./">← 프로젝트 소개</a>
       <div class="status-pill"><span class="dot" id="connDot"></span> <span id="connText">연결 중...</span></div>
     </div>
   </div>
@@ -261,7 +261,7 @@
 <footer>
   <div class="wrap">
     <p>MOBILLUG · OSR 운영 라이브 대시보드 · 운영팀 상시 체크용</p>
-    <p>이 페이지는 로컬 서버(<code>localhost:8765</code>)의 실시간 데이터를 15초마다 자동 갱신합니다. 프로젝트 소개는 <a href="/" style="color:var(--accent2);">여기</a>.</p>
+    <p>이 페이지는 로컬 서버(<code>localhost:8765</code>)의 실시간 데이터를 15초마다 자동 갱신합니다. 프로젝트 소개는 <a href="./" style="color:var(--accent2);">여기</a>.</p>
   </div>
 </footer>
 
@@ -610,7 +610,7 @@ async function poll(){
   const connDot = document.getElementById('connDot');
   const connText = document.getElementById('connText');
   try{
-    const res = await fetch('/stats.json', { cache: 'no-store' });
+    const res = await fetch('stats.json', { cache: 'no-store' });
     if(!res.ok) throw new Error('bad status');
     const data = await res.json();
     connDot.classList.remove('offline');
