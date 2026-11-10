@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSR 운영 라이브 대시보드</title>
+<meta name="description" content="OSR 대차이력 자동처리 운영팀 실시간 현황 대시보드. 누적 종결처리, 카테고리별 내역, 미반납 추적까지.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OSR 운영 라이브 대시보드">
+<meta property="og:description" content="누적 종결처리 건수, 카테고리별(피해/가해/과실) 내역, 미반납 추적까지 실시간으로 확인하세요.">
+<meta property="og:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mobillug-osr-dashboard.loca.lt/live.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OSR 운영 라이브 대시보드">
+<meta name="twitter:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .nav-cta{
+    padding:8px 16px; border-radius:9px; font-size:12.5px; font-weight:700;
+    border:1px solid var(--line-hi); color:var(--txt); text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+  }
+  .nav-cta:hover{border-color:var(--accent); color:var(--accent2);}
+  .live-hero{padding:48px 0 40px;}
+  .hero-stat-strip{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;
+  }
+  .hero-stat-cell{background:var(--card); padding:26px 24px;}
+  @media(max-width:860px){ .hero-stat-strip{grid-template-columns:repeat(3,1fr);} }
+  @media(max-width:560px){ .hero-stat-strip{grid-template-columns:repeat(2,1fr);} }
+  .hero-stat-num{font-size:30px; font-weight:800; letter-spacing:-.02em;}
+  .hero-stat-label{margin-top:7px; font-size:14.5px; font-weight:700; color:var(--txt);}
+  .hero-stat-sub{margin-top:3px; font-size:12.5px; color:var(--txt-dim);}
+  .trigger-panel{
+    background:var(--card); border:1px solid var(--line-hi); border-radius:16px; padding:18px 20px;
+    min-width:260px; max-width:300px;
+  }
+  .trigger-panel-title{font-size:12.5px; font-weight:700; color:var(--txt); margin-bottom:12px;}
+  .trigger-row{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:9px;}
+  .trigger-btn{
+    flex:1; font-size:12.5px; font-weight:700; padding:9px 12px; border-radius:9px;
+    background:var(--card-hi); border:1px solid var(--line-hi); color:var(--txt); cursor:pointer; transition:all .15s; text-align:left;
+  }
+  .trigger-btn:hover:not(:disabled){border-color:var(--accent); color:var(--accent2);}
+  .trigger-btn:disabled{opacity:.5; cursor:not-allowed;}
+  .trigger-status{font-size:12px; color:var(--txt-faint); text-align:right; min-width:90px; line-height:1.35;}
+  .trigger-status.pending{color:var(--warn);}
+  .trigger-status.running{color:#5b8cff;}
+  .trigger-status.done{color:#7ee0c3;}
+  .trigger-status.error{color:#ff7a7a;}
+  .trigger-note{font-size:12px; color:var(--txt-dim); margin-top:8px; line-height:1.55; border-top:1px solid var(--line); padding-top:10px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-badge">M</div>
+      <div>OSR 운영 라이브<small>MOBILLUG 대차이력 자동처리</small></div>
+    </div>
+    <div class="navlinks">
+      <a href="#category">카테고리별 내역</a>
+      <a href="#completionRate">종결율</a>
+      <a href="#returnDelay">반납지연</a>
+      <a href="#overdue">미반납 추적</a>
+      <a href="#timeline">처리 타임라인</a>
+      <a href="#log">실행 로그</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <a class="nav-cta" href="/">← 프로젝트 소개</a>
+      <div class="status-pill"><span class="dot" id="connDot"></span> <span id="connText">연결 중...</span></div>
+    </div>
+  </div>
+</nav>
+
+<header class="live-hero">
+  <div class="wrap">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:28px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:300px;">
+        <div class="eyebrow live">🟢 LIVE · <span id="routineStatusText">실시간 연동됨</span></div>
+        <h1 class="title" style="font-size:clamp(28px,3.6vw,38px);">자동화 시작(10/2) 이후<br><span class="grad">누적 운영 실적 · 상시 추적</span></h1>
+        <p class="subtitle" style="font-size:14.5px; max-width:720px;">
+          OSR 시스템의 종결처리 총건수를 직접 조회합니다 — 누가 처리하든(팀원의 Aside 자동화 포함) 상태 기준으로 전부 집계되는 상시 운영 지표입니다.
+          <span style="color:var(--txt-faint);">마지막 갱신: <b id="lastUpdated" style="color:var(--txt-dim);">-</b> <span style="color:var(--txt-faint);">(매일 오전 8시 수치값 업데이트, 화면 자체는 15초마다 새로고침)</span></span>
+        </p>
+      </div>
+      <div class="trigger-panel">
+        <div class="trigger-panel-title">수동 처리 시작 <span style="font-weight:500; color:#ff7a7a;">(일시 중단)</span></div>
+        <div class="trigger-row">
+          <button class="trigger-btn" data-cat="damage" onclick="triggerManual('damage')" disabled>피해 종결 시작</button>
+          <div class="trigger-status" id="trigger-status-damage"></div>
+        </div>
+        <div class="trigger-row">
+          <button class="trigger-btn" data-cat="atfault" onclick="triggerManual('atfault')" disabled>가해 검증 시작</button>
+          <div class="trigger-status" id="trigger-status-atfault"></div>
+        </div>
+        <div class="trigger-row">
+          <button class="trigger-btn" data-cat="negligence" onclick="triggerManual('negligence')" disabled>과실 검증 시작</button>
+          <div class="trigger-status" id="trigger-status-negligence"></div>
+        </div>
+        <div class="trigger-note" style="color:#ff7a7a;">발표 기간 동안 일시적으로 비활성화되었습니다. 발표 종료 후 다시 활성화됩니다.</div>
+      </div>
+    </div>
+
+    <div class="hero-stat-strip" style="margin-top:36px;">
+      <div class="hero-stat-cell">
+        <div class="hero-stat-num" id="hero-cumulative">-</div>
+        <div class="hero-stat-label">누적 종결처리 건수</div>
+        <div class="hero-stat-sub">자동화 시작(10/2)부터 · 계속 증가</div>
+      </div>
+      <div class="hero-stat-cell">
+        <div class="hero-stat-num" style="color:var(--warn);" id="hero-pending">-</div>
+        <div class="hero-stat-label">청구설정 완료 · 종결대기중</div>
+        <div class="hero-stat-sub">가해/과실 등, 직원 종결 대기</div>
+      </div>
+      <div class="hero-stat-cell">
+        <div class="hero-stat-num" style="color:#ff7a7a;" id="hero-unresolved">-</div>
+        <div class="hero-stat-label">현재 미종결 건수</div>
+        <div class="hero-stat-sub">피해(문서미비 등)+가해/과실(종결대기) 합계</div>
+      </div>
+      <div class="hero-stat-cell">
+        <div class="hero-stat-num">90<span style="font-size:15px; font-weight:600; color:var(--txt-dim);">일</span></div>
+        <div class="hero-stat-label">매 실행마다 전수 재점검 범위</div>
+        <div class="hero-stat-sub">놓치는 건이 없도록 롤링 윈도우</div>
+      </div>
+      <div class="hero-stat-cell">
+        <div class="hero-stat-num" id="hero-days">-</div>
+        <div class="hero-stat-label">자동화 시작 후 경과일</div>
+        <div class="hero-stat-sub">2026.10.02 ~ 오늘</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="category" style="padding-top:12px;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">By Category</div>
+      <div class="sec-title">카테고리별 내역 (10/2~)</div>
+      <div class="sec-desc">피해 / 가해 / 과실 각각의 종결 완료 건수와, 직원 종결을 기다리는 대기 건수입니다.</div>
+    </div>
+    <div class="cat-grid" id="catGrid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;"></div>
+  </div>
+</section>
+
+<section class="sec" id="completionRate" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Completion Rate</div>
+      <div class="sec-title">반납건 대비 종결율</div>
+      <div class="sec-desc">피해 전체 + 과실(오톈마일 파트너사의 고객사=현대 제외) 기준. 자동종결 능력 및 협력업체의 오입력율(=직원 개입율)을 확인합니다.</div>
+    </div>
+    <div class="chart-card">
+      <div class="overdue-top">
+        <div class="overdue-count-box">
+          <div class="overdue-count" style="color:#7ee0c3;" id="completionRateNum">-</div>
+          <div class="overdue-count-label">종결율 (%)</div>
+        </div>
+        <div class="overdue-breakdown">
+          <span class="overdue-chip"><b id="completionA">-</b>건 · 대상(A)</span>
+          <span class="overdue-chip"><b id="completionDone">-</b>건 · 종결완료</span>
+          <span class="overdue-chip"><b id="completionPending">-</b>건 · 보류중</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="overdue" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Overdue Watch</div>
+      <div class="sec-title">배차 후 7일 경과 미반납 건</div>
+      <div class="sec-desc">사고유형 전체 기준, 배차일시로부터 7일 이상 지났지만 아직 반납되지 않은 건입니다. OSR "반납 경과 일수 관리" 화면 기준으로 매 갱신마다 직접 조회합니다.</div>
+    </div>
+    <div class="chart-card">
+      <div class="overdue-top">
+        <div class="overdue-count-box">
+          <div class="overdue-count" id="overdueCount">-</div>
+          <div class="overdue-count-label">건 (7일 이상 경과)</div>
+        </div>
+        <div class="overdue-breakdown" id="overdueBreakdown"></div>
+      </div>
+      <div class="case-list-head">
+        <span id="overdueListLabel">접수번호 -건</span>
+        <button class="copy-btn" onclick="copyOverdueList(event)">📋 전체 복사</button>
+      </div>
+      <div class="case-chips" id="overdueChips" style="max-height:260px;"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="returnDelay" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Partner Data Entry Lag</div>
+      <div class="sec-title">렌터카 반납 업로드 평균 지연 시간</div>
+      <div class="sec-desc">전산 반납일시 대비, 실제 반납완료·계약서 저장이 얼마나 더 늘어졌는지를 일별로 계산합니다 (전일자 배치, 매일 1회 집계).</div>
+    </div>
+    <div class="chart-card" id="returnDelayCard">
+      <div style="color:var(--txt-faint); font-size:13px; text-align:center; padding:30px;" id="returnDelayEmpty">데이터 수집 중… 첫 집계는 다음 일별 배치에서 반영됩니다.</div>
+      <div class="case-chips" id="returnDelayChips" style="display:none;"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="timeline" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Operation Timeline</div>
+      <div class="sec-title">실행할수록 쌓이는 처리 실적</div>
+      <div class="sec-desc">날짜별로 자동 실행된 횟수와 처리된 대차 이력 건수입니다. 공휴일에는 스스로 판단해 실행을 건너뛰었습니다.</div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-top">
+        <div class="legend">
+          <div class="legend-item"><span class="legend-swatch" style="background:linear-gradient(135deg,#ffb86b,#ff8a5b)"></span>수동 처리 단계</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:var(--grad)"></span>자동화 전환 이후</div>
+          <div class="legend-item"><span class="legend-swatch" style="background:#3a4257"></span>공휴일 / 실행없음</div>
+        </div>
+        <div class="range-controls">
+          <button class="range-btn" data-range="7" onclick="applyChartRange(7)">최근 1주</button>
+          <button class="range-btn" data-range="14" onclick="applyChartRange(14)">최근 2주</button>
+          <button class="range-btn" data-range="30" onclick="applyChartRange(30)">최근 30일</button>
+          <button class="range-btn" data-range="all" onclick="applyChartRange('all')">전체</button>
+          <input type="date" id="chartFrom" class="range-date" onchange="applyCustomRange()">
+          <span style="color:var(--txt-faint); font-size:12px;">~</span>
+          <input type="date" id="chartTo" class="range-date" onchange="applyCustomRange()">
+        </div>
+      </div>
+      <div class="bars" id="barChart"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="log" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Execution Log · Live</div>
+      <div class="sec-title">최근 실행 이력</div>
+      <div class="sec-desc">로컬 서버가 Aside 세션 기록을 직접 조회해 보여줍니다. 행을 클릭하면 처리한 접수번호 전체를 확인·복사할 수 있습니다.</div>
+    </div>
+    <div class="chart-card" style="padding:8px 8px 8px;">
+      <table class="log-table">
+        <thead><tr><th>실행 시각</th><th>스케줄</th><th>처리 건수</th><th>상태</th></tr></thead>
+        <tbody id="logBody"><tr><td colspan="4" style="text-align:center; padding:40px;">불러오는 중...</td></tr></tbody>
+      </table>
+      <div class="week-nav">
+        <button id="weekPrev" onclick="changeLogWeek(1)">← 이전 주</button>
+        <span><b id="weekLabel">-</b></span>
+        <button id="weekNext" onclick="changeLogWeek(-1)">다음 주 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>MOBILLUG · OSR 운영 라이브 대시보드 · 운영팀 상시 체크용</p>
+    <p>이 페이지는 로컬 서버(<code>localhost:8765</code>)의 실시간 데이터를 15초마다 자동 갱신합니다. 프로젝트 소개는 <a href="/" style="color:var(--accent2);">여기</a>.</p>
+  </div>
+</footer>
+
+<script>
+const REFRESH_MS = 15000;
+let lastGoodData = null;
+
+function fmtTime(iso){
+  const d = new Date(iso);
+  return d.toLocaleString('ko-KR', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false });
+}
+function fmtDate(iso){
+  const d = new Date(iso);
+  return d.toLocaleString('ko-KR', { month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+}
+function fmtDateOnly(ms){
+  const d = new Date(ms);
+  return (d.getMonth()+1).toString().padStart(2,'0') + '/' + d.getDate().toString().padStart(2,'0');
+}
+
+function renderCategoryGrid(cb){
+  const catGrid = document.getElementById('catGrid');
+  const cats = [
+    { key:'damage', color:'#7ee0c3', pendingKey:'pendingDocsOrOther', pendingLabel:'문서미비 등 미종결' },
+    { key:'atfault', color:'#ffb86b', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
+    { key:'negligence', color:'#5b8cff', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
+  ];
+  catGrid.innerHTML = '';
+  cats.forEach(c=>{
+    const d = cb[c.key];
+    if(!d) return;
+    const pendingVal = d[c.pendingKey];
+    const card = document.createElement('div');
+    card.className = 'cat-card';
+    card.innerHTML = `
+      <div class="cat-name"><span class="cat-dot" style="background:${c.color}"></span>${d.label}</div>
+      <div class="cat-main">${d.finalized.toLocaleString()}</div>
+      <div class="cat-main-label">종결 완료 (10/2~)</div>
+      <div class="cat-sub"><b>${pendingVal.toLocaleString()}</b>건
+        <div class="cat-sub-label">${d.pendingNote || c.pendingLabel}</div>
+      </div>`;
+    catGrid.appendChild(card);
+  });
+}
+
+let fullDailyData = [];
+let currentRangeDays = 7;
+
+function applyChartRange(days){
+  currentRangeDays = days;
+  document.querySelectorAll('.range-btn[data-range]').forEach(b=>{
+    b.classList.toggle('active', b.dataset.range == String(days));
+  });
+  let sliced;
+  if(days === 'all'){
+    sliced = fullDailyData;
+  } else {
+    sliced = fullDailyData.slice(-days);
+  }
+  renderChart(sliced);
+}
+
+function applyCustomRange(){
+  const fromVal = document.getElementById('chartFrom').value;
+  const toVal = document.getElementById('chartTo').value;
+  if(!fromVal || !toVal) return;
+  document.querySelectorAll('.range-btn[data-range]').forEach(b=>b.classList.remove('active'));
+  const sliced = fullDailyData.filter(d => d.date >= fromVal && d.date <= toVal);
+  renderChart(sliced);
+}
+
+function renderChart(daily){
+  const barChart = document.getElementById('barChart');
+  barChart.innerHTML = '';
+  const max = Math.max(...daily.map(d=>d.cases), 1);
+  const weekday = ['일','월','화','수','목','금','토'];
+  let prevPhase = null;
+  daily.forEach((d,i)=>{
+    if(d.phase && prevPhase && d.phase !== prevPhase){
+      const divider = document.createElement('div');
+      divider.className = 'phase-divider';
+      divider.innerHTML = '<span class="pd-label">자동화 전환 →</span>';
+      barChart.appendChild(divider);
+    }
+    prevPhase = d.phase || prevPhase;
+    const dateObj = new Date(d.date + 'T00:00:00+09:00');
+    const label = (dateObj.getMonth()+1).toString().padStart(2,'0')+'/'+dateObj.getDate().toString().padStart(2,'0');
+    const wd = weekday[dateObj.getDay()];
+    const isHoliday = d.cases === 0;
+    const h = isHoliday ? 18 : Math.max(14, (d.cases/max)*170);
+    const barClass = isHoliday ? 'holiday' : (d.phase === 'manual' ? 'manual' : '');
+    const col = document.createElement('div');
+    col.className = 'bar-col';
+    col.innerHTML = `
+      <div class="bar ${barClass}" style="height:${h}px">
+        <div class="bar-val">${isHoliday ? '-' : d.cases+'건'}</div>
+      </div>
+      <div class="bar-date"><b>${label}</b>${wd}</div>`;
+    barChart.appendChild(col);
+  });
+}
+
+function badgeFor(status, cases){
+  if(status === 'errored') return '<span class="badge badge-err">오류</span>';
+  if(status === 'aborted') return '<span class="badge badge-err">중단됨</span>';
+  if(status === 'running') return '<span class="badge badge-ok">진행 중</span>';
+  if(cases === 0 || cases === null) return '<span class="badge badge-skip">실행됨 (0건)</span>';
+  return '<span class="badge badge-ok">정상 완료</span>';
+}
+
+let allRunsData = [];
+let weekOffset = 0;
+
+function getWeekBounds(refDateMs, offset){
+  const end = new Date(refDateMs - offset*7*24*3600*1000);
+  const start = new Date(end.getTime() - 7*24*3600*1000);
+  return { start, end };
+}
+
+function changeLogWeek(delta){
+  weekOffset = Math.max(0, weekOffset + delta);
+  renderLogWeek();
+}
+
+function scheduleLabelFor(title){
+  return (title||'').includes('9시30') ? '평일 9:30' :
+         (title||'').includes('17시') && (title||'').includes('13시') ? '평일 13/17시' :
+         (title||'').includes('17시') ? '평일 17시' :
+         (title||'').includes('13시') ? '평일 13시' : (title || '-');
+}
+
+function renderLogWeek(){
+  if(!allRunsData.length) return;
+  const sorted = [...allRunsData].sort((a,b)=> new Date(b.created) - new Date(a.created));
+  const mostRecentMs = new Date(sorted[0].created).getTime();
+  const { start, end } = getWeekBounds(mostRecentMs, weekOffset);
+  const weekRuns = sorted.filter(r => { const t = new Date(r.created).getTime(); return t > start.getTime() && t <= end.getTime(); });
+
+  const logBody = document.getElementById('logBody');
+  logBody.innerHTML = '';
+  if(weekRuns.length === 0){
+    logBody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--txt-faint);">이 기간에는 실행 기록이 없습니다.</td></tr>';
+  } else {
+    weekRuns.forEach((r, idx)=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${fmtDate(r.created)}</td><td>${scheduleLabelFor(r.title)}</td><td>${r.cases!==null?r.cases+'건':'—'}</td><td>${badgeFor(r.status, r.cases)}</td>`;
+      const panelRow = document.createElement('tr');
+      panelRow.className = 'case-panel';
+      const rowId = 'case-' + idx + '-' + weekOffset;
+      panelRow.id = rowId;
+      const nums = r.caseNumbers || [];
+      panelRow.innerHTML = `<td colspan="4">
+        <div class="case-list-head">
+          <span>접수번호 ${nums.length}건</span>
+          <button class="copy-btn" onclick="copyCaseList(event, '${rowId}')">📋 복사</button>
+        </div>
+        <div class="case-chips">${nums.length ? nums.map(n=>`<span class="case-chip">${n}</span>`).join('') : '<span style="color:var(--txt-faint); font-size:12px;">접수번호 기록 없음</span>'}</div>
+      </td>`;
+      tr.addEventListener('click', ()=>{
+        tr.classList.toggle('expanded');
+        panelRow.classList.toggle('open');
+      });
+      logBody.appendChild(tr);
+      logBody.appendChild(panelRow);
+    });
+  }
+
+  document.getElementById('weekLabel').textContent = `${fmtDateOnly(start.getTime()+24*3600*1000)} ~ ${fmtDateOnly(end.getTime())}`;
+  document.getElementById('weekNext').disabled = weekOffset === 0;
+  const hasOlder = sorted.some(r => new Date(r.created).getTime() <= start.getTime());
+  document.getElementById('weekPrev').disabled = !hasOlder;
+}
+
+function copyCaseList(evt, rowId){
+  evt.stopPropagation();
+  const panel = document.getElementById(rowId);
+  const chips = Array.from(panel.querySelectorAll('.case-chip')).map(c=>c.textContent);
+  const text = chips.join('\n');
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = evt.target;
+    const orig = btn.textContent;
+    btn.textContent = '✓ 복사됨';
+    setTimeout(()=>{ btn.textContent = orig; }, 1500);
+  });
+}
+
+const TRIGGER_LABELS = { damage:'피해 종결', atfault:'가해 검증(청구설정)', negligence:'과실 검증(청구설정)' };
+
+async function triggerManual(category){
+  const label = TRIGGER_LABELS[category] || category;
+  const ok = confirm(`${label} 처리를 지금 수동으로 시작할까요?\n\n실제 OSR 데이터가 변경됩니다. 클릭 후 최대 10분 내에 실행됩니다.`);
+  if(!ok) return;
+  const btn = document.querySelector(`.trigger-btn[data-cat="${category}"]`);
+  if(btn) btn.disabled = true;
+  try{
+    const res = await fetch('/api/trigger', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ category }) });
+    const data = await res.json();
+    if(!res.ok){
+      alert('요청 실패: ' + (data.error || res.status));
+      if(btn) btn.disabled = false;
+      return;
+    }
+    updateTriggerStatus(category, { status:'pending', requestedAt: new Date().toISOString() });
+  } catch(e){
+    alert('요청 실패: ' + e.message);
+    if(btn) btn.disabled = false;
+  }
+}
+
+function updateTriggerStatus(category, t){
+  const el = document.getElementById('trigger-status-' + category);
+  const btn = document.querySelector(`.trigger-btn[data-cat="${category}"]`);
+  if(!el || !btn) return;
+  if(!t || t.status === 'idle'){
+    el.textContent = '';
+    el.className = 'trigger-status';
+    btn.disabled = false;
+    return;
+  }
+  if(t.status === 'pending'){
+    el.textContent = '⏳ 대기 중 (곷 시작)';
+    el.className = 'trigger-status pending';
+    btn.disabled = true;
+  } else if(t.status === 'running'){
+    el.textContent = '🔄 처리 중...';
+    el.className = 'trigger-status running';
+    btn.disabled = true;
+  } else if(t.status === 'done'){
+    const n = (t.result && t.result.count != null) ? t.result.count : 0;
+    el.textContent = `✓ 완료 (${n}건) · ${fmtTime(t.finishedAt)}`;
+    el.className = 'trigger-status done';
+    btn.disabled = false;
+  } else if(t.status === 'error'){
+    el.textContent = '⚠ ' + ((t.result && t.result.note) || '오류 발생');
+    el.className = 'trigger-status error';
+    btn.disabled = false;
+  }
+}
+
+function renderOverdue(ot){
+  document.getElementById('overdueCount').textContent = ot.count.toLocaleString();
+  const bd = document.getElementById('overdueBreakdown');
+  bd.innerHTML = Object.entries(ot.breakdown || {})
+    .sort((a,b)=>b[1]-a[1])
+    .map(([k,v])=>`<span class="overdue-chip"><b>${v}</b>건 · ${k}</span>`).join('');
+  const cases = ot.cases || [];
+  document.getElementById('overdueListLabel').textContent = `접수번호 ${cases.length}건 (경과일수 많은 순)`;
+  const chipsEl = document.getElementById('overdueChips');
+  chipsEl.innerHTML = cases.length
+    ? cases.map(c=>`<span class="case-chip">${c.case} (${c.days}일)</span>`).join('')
+    : '<span style="color:var(--txt-faint); font-size:12px;">7일 이상 경과건 없음</span>';
+}
+
+function copyOverdueList(evt){
+  evt.stopPropagation();
+  const chips = Array.from(document.querySelectorAll('#overdueChips .case-chip')).map(c=>c.textContent);
+  navigator.clipboard.writeText(chips.join('\n')).then(()=>{
+    const btn = evt.target;
+    const orig = btn.textContent;
+    btn.textContent = '✓ 복사됨';
+    setTimeout(()=>{ btn.textContent = orig; }, 1500);
+  });
+}
+
+function renderLog(runs){
+  allRunsData = runs;
+  weekOffset = 0;
+  renderLogWeek();
+}
+
+function render(data){
+  document.getElementById('lastUpdated').textContent = fmtTime(data.lastUpdated);
+
+  const r17 = data.routines?.r17, r930 = data.routines?.r930;
+  const anyActive = (r17 && r17.status === 'active') || (r930 && r930.status === 'active');
+  document.getElementById('routineStatusText').textContent = anyActive
+    ? '라우틴 가동 중'
+    : '라우틴 일시정지 (OSR 직접 조회로 추적 중)';
+
+  if(data.totals?.automationStart){
+    const start = new Date(data.totals.automationStart + 'T00:00:00+09:00');
+    const now = new Date();
+    const days = Math.floor((now - start) / 86400000) + 1;
+    document.getElementById('hero-days').textContent = days + '일';
+  }
+
+  fullDailyData = data.daily;
+  const chartFromEl = document.getElementById('chartFrom');
+  const chartToEl = document.getElementById('chartTo');
+  if(chartFromEl && !chartFromEl.value && fullDailyData.length){
+    chartFromEl.min = fullDailyData[0].date;
+    chartFromEl.max = fullDailyData[fullDailyData.length-1].date;
+    chartToEl.min = fullDailyData[0].date;
+    chartToEl.max = fullDailyData[fullDailyData.length-1].date;
+  }
+  applyChartRange(currentRangeDays);
+  renderLog(data.runs);
+
+  if(data.handoffTracking){
+    const ht = data.handoffTracking;
+    if(ht.cumulativeFinalized){
+      document.getElementById('hero-cumulative').textContent = ht.cumulativeFinalized.count.toLocaleString();
+    }
+    if(ht.pendingStaffFinalization){
+      document.getElementById('hero-pending').textContent = ht.pendingStaffFinalization.count.toLocaleString();
+    }
+    if(ht.categoryBreakdown){
+      renderCategoryGrid(ht.categoryBreakdown);
+      const cb = ht.categoryBreakdown;
+      const unresolved = (cb.damage?.pendingDocsOrOther || 0) + (cb.atfault?.pendingStaffFinalization || 0) + (cb.negligence?.pendingStaffFinalization || 0);
+      document.getElementById('hero-unresolved').textContent = unresolved.toLocaleString();
+    }
+  }
+
+  if(data.overdueTracking){
+    renderOverdue(data.overdueTracking);
+  }
+
+  if(data.returnDelayTracking && data.returnDelayTracking.daily && data.returnDelayTracking.daily.length){
+    const rd = data.returnDelayTracking.daily;
+    document.getElementById('returnDelayEmpty').style.display = 'none';
+    const chipsEl = document.getElementById('returnDelayChips');
+    chipsEl.style.display = 'flex';
+    chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${d.avgMinutes}분 (${d.count}건)</span>`).join('');
+  }
+
+  if(data.completionRateTracking){
+    const crt = data.completionRateTracking;
+    document.getElementById('completionRateNum').textContent = crt.completionRate + '%';
+    document.getElementById('completionA').textContent = crt.A_total.toLocaleString();
+    document.getElementById('completionDone').textContent = crt.finalized.toLocaleString();
+    document.getElementById('completionPending').textContent = crt.pending.toLocaleString();
+  }
+
+  if(data.manualTrigger){
+    ['damage','atfault','negligence'].forEach(cat => updateTriggerStatus(cat, data.manualTrigger[cat]));
+  }
+  if(data.manualTriggerPaused){
+    document.querySelectorAll('.trigger-btn').forEach(b => b.disabled = true);
+  }
+
+  lastGoodData = data;
+}
+
+async function poll(){
+  const connDot = document.getElementById('connDot');
+  const connText = document.getElementById('connText');
+  try{
+    const res = await fetch('/api/stats', { cache: 'no-store' });
+    if(!res.ok) throw new Error('bad status');
+    const data = await res.json();
+    connDot.classList.remove('offline');
+    connText.textContent = 'LIVE 연결됨';
+    render(data);
+  }catch(e){
+    connDot.classList.add('offline');
+    connText.textContent = '서버 연결 끊김 (재시도 중)';
+    if(lastGoodData) render(lastGoodData);
+  }
+}
+
+poll();
+setInterval(poll, REFRESH_MS);
+</script>
+
+</body>
+</html>
