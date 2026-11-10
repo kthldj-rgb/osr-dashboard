@@ -610,7 +610,7 @@ async function poll(){
   const connDot = document.getElementById('connDot');
   const connText = document.getElementById('connText');
   try{
-    const res = await fetch('/api/stats', { cache: 'no-store' });
+    const res = await fetch('/stats.json', { cache: 'no-store' });
     if(!res.ok) throw new Error('bad status');
     const data = await res.json();
     connDot.classList.remove('offline');
