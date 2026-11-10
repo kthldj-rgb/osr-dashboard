@@ -2,22 +2,21 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OSR 운영 라이브 대시보드</title>
 <meta name="description" content="OSR 대차이력 자동처리 운영팀 실시간 현황 대시보드. 누적 종결처리, 카테고리별 내역, 미반납 추적까지.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="OSR 운영 라이브 대시보드">
 <meta property="og:description" content="누적 종결처리 건수, 카테고리별(피해/가해/과실) 내역, 미반납 추적까지 실시간으로 확인하세요.">
-<meta property="og:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
+<meta property="og:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://kthldj-rgb.github.io/osr-dashboard/live.html">
+<meta property="og:url" content="https://mobillug-osr-dashboard.loca.lt/live.html">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OSR 운영 라이브 대시보드">
-<meta name="twitter:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
-<link rel="stylesheet" href="styles.css">
+<meta name="twitter:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
+<link rel="stylesheet" href="/styles.css">
 <style>
   .nav-cta{
     padding:8px 16px; border-radius:9px; font-size:12.5px; font-weight:700;
@@ -72,7 +71,7 @@
       <a href="#log">실행 로그</a>
     </div>
     <div style="display:flex; align-items:center; gap:10px;">
-      <a class="nav-cta" href="./">← 프로젝트 소개</a>
+      <a class="nav-cta" href="/">← 프로젝트 소개</a>
       <div class="status-pill"><span class="dot" id="connDot"></span> <span id="connText">연결 중...</span></div>
     </div>
   </div>
@@ -262,7 +261,7 @@
 <footer>
   <div class="wrap">
     <p>MOBILLUG · OSR 운영 라이브 대시보드 · 운영팀 상시 체크용</p>
-    <p>이 페이지는 로컬 서버(<code>localhost:8765</code>)의 실시간 데이터를 15초마다 자동 갱신합니다. 프로젝트 소개는 <a href="./" style="color:var(--accent2);">여기</a>.</p>
+    <p>이 페이지는 로컬 서버(<code>localhost:8765</code>)의 실시간 데이터를 15초마다 자동 갱신합니다. 프로젝트 소개는 <a href="/" style="color:var(--accent2);">여기</a>.</p>
   </div>
 </footer>
 
@@ -502,6 +501,16 @@ function updateTriggerStatus(category, t){
   }
 }
 
+function formatMinutesAsHM(mins){
+  if(mins == null) return '-';
+  const sign = mins < 0 ? '-' : '';
+  const abs = Math.abs(mins);
+  const h = Math.floor(abs / 60);
+  const m = Math.round(abs % 60);
+  if(h === 0) return `${sign}${m}분`;
+  return `${sign}${h}시간 ${m}분`;
+}
+
 function renderOverdue(ot){
   document.getElementById('overdueCount').textContent = ot.count.toLocaleString();
   const bd = document.getElementById('overdueBreakdown');
@@ -512,7 +521,7 @@ function renderOverdue(ot){
   document.getElementById('overdueListLabel').textContent = `접수번호 ${cases.length}건 (경과일수 많은 순)`;
   const chipsEl = document.getElementById('overdueChips');
   chipsEl.innerHTML = cases.length
-    ? cases.map(c=>`<span class="case-chip">${c.case} (${c.days}일)</span>`).join('')
+    ? cases.map(c=>`<span class="case-chip">${typeof c === 'string' ? c : c.case}${(typeof c === 'object' && c.days != null) ? ` (${c.days}일)` : ''}</span>`).join('')
     : '<span style="color:var(--txt-faint); font-size:12px;">7일 이상 경과건 없음</span>';
 }
 
@@ -586,7 +595,7 @@ function render(data){
     document.getElementById('returnDelayEmpty').style.display = 'none';
     const chipsEl = document.getElementById('returnDelayChips');
     chipsEl.style.display = 'flex';
-    chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${d.avgMinutes}분 (${d.count}건)</span>`).join('');
+    chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${formatMinutesAsHM(d.avgMinutes)} (${d.count}건)</span>`).join('');
   }
 
   if(data.completionRateTracking){
@@ -611,7 +620,7 @@ async function poll(){
   const connDot = document.getElementById('connDot');
   const connText = document.getElementById('connText');
   try{
-    const res = await fetch('stats.json', { cache: 'no-store' });
+    const res = await fetch('/api/stats', { cache: 'no-store' });
     if(!res.ok) throw new Error('bad status');
     const data = await res.json();
     connDot.classList.remove('offline');
