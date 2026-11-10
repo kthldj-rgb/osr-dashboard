@@ -178,7 +178,7 @@
 </footer>
 
 <script>
-fetch('/api/stats', { cache: 'no-store' }).then(r=>r.json()).then(data=>{
+fetch('/stats.json', { cache: 'no-store' }).then(r=>r.json()).then(data=>{
   if(data.totals?.automationStart){
     const start = new Date(data.totals.automationStart + 'T00:00:00+09:00');
     const now = new Date();
