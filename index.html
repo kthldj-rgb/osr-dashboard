@@ -8,16 +8,16 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="OSR 대차이력 자동처리 AI 에이전트">
 <meta property="og:description" content="반복적인 OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI. 누적 종결처리 건수와 운영 현황을 실시간으로 확인하세요.">
-<meta property="og:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
+<meta property="og:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://mobillug-osr-dashboard.loca.lt/">
+<meta property="og:url" content="https://kthldj-rgb.github.io/osr-dashboard/">
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OSR 대차이력 자동처리 AI 에이전트">
 <meta name="twitter:description" content="반복적인 OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI.">
-<meta name="twitter:image" content="https://mobillug-osr-dashboard.loca.lt/og-image.jpg">
-<link rel="stylesheet" href="/styles.css">
+<meta name="twitter:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
+<link rel="stylesheet" href="styles.css">
 <style>
   .nav-cta{
     padding:8px 16px; border-radius:9px; font-size:12.5px; font-weight:700;
@@ -47,7 +47,7 @@
       <a href="#demo-video">자동화 영상</a>
       <a href="#reliability">신뢰성 사례</a>
     </div>
-    <a class="nav-cta" href="/live.html">운영팀 라이브 현황 →</a>
+    <a class="nav-cta" href="live.html">운영팀 라이브 현황 →</a>
   </div>
 </nav>
 
@@ -62,7 +62,7 @@
       청구까지 수행합니다. 애매한 건은 절대 임의로 처리하지 않고 사람에게 묻습니다.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="/live.html">📊 운영 라이브 대시보드 열기</a>
+      <a class="btn btn-primary" href="live.html">📊 운영 라이브 대시보드 열기</a>
       <a class="btn btn-ghost" href="#reliability">신뢰성 개선 사례 보기</a>
     </div>
     <div class="mini-stats" id="miniStats">
@@ -120,8 +120,8 @@
     </div>
     <div class="chart-card" style="padding:16px;">
       <video controls preload="metadata" style="width:100%; border-radius:12px; display:block; background:#000;">
-        <source src="/demo.mp4" type="video/mp4">
-        브라우저가 video 태그를 지원하지 않습니다. <a href="/demo.mp4">영상 다운로드</a>
+        <source src="demo.mp4" type="video/mp4">
+        브라우저가 video 태그를 지원하지 않습니다. <a href="demo.mp4">영상 다운로드</a>
       </video>
     </div>
   </div>
@@ -165,7 +165,7 @@
     <div class="cta-band">
       <h3>실제 처리 현황이 궁금하신가요?</h3>
       <p>운영팀이 상시 체크하는 라이브 대시보드에서 피해·가해·과실 카테고리별 실적과 실행 로그를 실시간으로 확인할 수 있습니다.</p>
-      <a class="btn btn-primary" href="/live.html">📊 운영 라이브 대시보드 열기 →</a>
+      <a class="btn btn-primary" href="live.html">📊 운영 라이브 대시보드 열기 →</a>
     </div>
   </div>
 </section>
@@ -173,12 +173,12 @@
 <footer>
   <div class="wrap">
     <p>MOBILLUG · OSR 대차이력 자동처리 AI 에이전트 · Aside 기반 브라우저 자동화</p>
-    <p>이 페이지는 프로젝트 소개용입니다. 실시간 운영 지표는 <a href="/live.html" style="color:var(--accent2);">운영 라이브 페이지</a>에서 확인하세요.</p>
+    <p>이 페이지는 프로젝트 소개용입니다. 실시간 운영 지표는 <a href="live.html" style="color:var(--accent2);">운영 라이브 페이지</a>에서 확인하세요.</p>
   </div>
 </footer>
 
 <script>
-fetch('/stats.json', { cache: 'no-store' }).then(r=>r.json()).then(data=>{
+fetch('stats.json', { cache: 'no-store' }).then(r=>r.json()).then(data=>{
   if(data.totals?.automationStart){
     const start = new Date(data.totals.automationStart + 'T00:00:00+09:00');
     const now = new Date();
