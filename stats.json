@@ -3692,8 +3692,15 @@
         "count": 68,
         "excludedCount": 8,
         "extractFailedCount": 0
+      },
+      {
+        "date": "2026-11-10",
+        "avgMinutes": 343,
+        "count": 130,
+        "excludedCount": 13,
+        "extractFailedCount": 0
       }
     ],
-    "lastComputedDate": "2026-11-09"
+    "lastComputedDate": "2026-11-10"
   }
 }
