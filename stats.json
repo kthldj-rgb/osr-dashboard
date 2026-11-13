@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T03:05:37.395Z",
+  "lastUpdated": "2026-11-13T04:07:07.878Z",
   "totals": {
     "totalRuns": 48,
     "uniqueCases": 3003,
@@ -1556,8 +1556,8 @@
         "20261019A00040",
         "20261019A00039",
         "20261019A00038",
-        "20261019A00034",
         "20261019A00033",
+        "20261019A00034",
         "20261019A00032",
         "20261019A00031",
         "20261019A00030",
@@ -3797,7 +3797,7 @@
     ],
     "cumulativeFinalized": {
       "count": 3829,
-      "lastChecked": "2026-11-13T03:05:37.395Z"
+      "lastChecked": "2026-11-13T04:07:07.878Z"
     },
     "pendingStaffFinalization": {
       "count": 6,
@@ -3805,7 +3805,7 @@
         "atfault": 3,
         "negligence": 3
       },
-      "lastChecked": "2026-11-13T03:05:37.395Z"
+      "lastChecked": "2026-11-13T04:07:07.878Z"
     },
     "categoryBreakdown": {
       "damage": {
@@ -3826,20 +3826,20 @@
         "pendingStaffFinalization": 3,
         "pendingNote": "AI 청구설정 완료, 직원 종결 대기"
       },
-      "lastChecked": "2026-11-13T03:05:37.395Z"
+      "lastChecked": "2026-11-13T04:07:07.878Z"
     }
   },
   "overdueTracking": {
-    "count": 125,
+    "count": 120,
     "breakdown": {
-      "과실": 50,
-      "단독": 46,
+      "과실": 49,
+      "단독": 42,
       "가해": 19,
       "정비": 5,
       "가해자직불": 2,
       "자차": 3
     },
-    "lastChecked": "2026-11-13T03:05:37.395Z"
+    "lastChecked": "2026-11-13T04:07:07.878Z"
   },
   "manualTrigger": {
     "damage": {
@@ -3865,11 +3865,11 @@
     }
   },
   "completionRateTracking": {
-    "A_total": 2470,
+    "A_total": 2484,
     "finalized": 1759,
-    "pending": 711,
-    "completionRate": 71.21,
-    "lastChecked": "2026-11-13T03:05:37.395Z"
+    "pending": 725,
+    "completionRate": 70.81,
+    "lastChecked": "2026-11-13T04:07:07.878Z"
   },
   "returnDelayTracking": {
     "note": "렌터카 반납 업로드 평균 지연 시간. 일자별로, 그날 반납일시에 해당하는 건들에 대해 max(반납완료 로그시각, 계약서저장 로그시각) - 반납일시(필드값)의 평균(분). 협력업체 전산입력 기강해이 확인용. 강현우 사원 요청으로 2026-11-09 추가, 매일 전일분을 배치로 계산.",
