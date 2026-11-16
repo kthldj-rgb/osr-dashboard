@@ -330,9 +330,9 @@ function fmtDateOnly(ms){
 function renderCategoryGrid(cb){
   const catGrid = document.getElementById('catGrid');
   const cats = [
-    { key:'damage', color:'#7ee0c3', pendingKey:'pendingDocsOrOther', pendingLabel:'문서미비 등 미종결' },
-    { key:'atfault', color:'#ffb86b', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
-    { key:'negligence', color:'#5b8cff', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
+    { key:'damage', label:'피해', color:'#7ee0c3', pendingKey:'pendingDocsOrOther', pendingLabel:'문서미비 등 미종결' },
+    { key:'atfault', label:'가해', color:'#ffb86b', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
+    { key:'negligence', label:'과실', color:'#5b8cff', pendingKey:'pendingStaffFinalization', pendingLabel:'직원 종결 대기' },
   ];
   catGrid.innerHTML = '';
   cats.forEach(c=>{
@@ -342,7 +342,7 @@ function renderCategoryGrid(cb){
     const card = document.createElement('div');
     card.className = 'cat-card';
     card.innerHTML = `
-      <div class="cat-name"><span class="cat-dot" style="background:${c.color}"></span>${d.label}</div>
+      <div class="cat-name"><span class="cat-dot" style="background:${c.color}"></span>${c.label}</div>
       <div class="cat-main">${d.finalized.toLocaleString()}</div>
       <div class="cat-main-label">종결 완료 (10/2~)</div>
       <div class="cat-sub"><b>${pendingVal.toLocaleString()}</b>건
