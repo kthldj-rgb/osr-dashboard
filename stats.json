@@ -4466,5 +4466,56 @@
       }
     ],
     "lastComputedDate": "2026-11-16"
+  },
+  "dailyThroughput": {
+    "note": "접수일 기준이 아니라 실제로 그 날짜에 새로 종결/청구설정된 건수(자동화+직원 전체). 전날 종료 시점 대비 증감으로 계산.",
+    "method": "피해종결=Δdamage.finalized / 과실종결=Δnegligence.finalized / 가해청구설정=Δatfault.pendingStaffFinalization+Δatfault.finalized / 과실청구설정=Δnegligence.pendingStaffFinalization+Δnegligence.finalized",
+    "daily": [
+      {
+        "date": "2026-11-12",
+        "damageClosed": 69,
+        "negligenceClosed": 7,
+        "atfaultClaimSetup": 7,
+        "negligenceClaimSetup": 24,
+        "total": 107,
+        "source": "직원 제공(정확한 실측치)"
+      },
+      {
+        "date": "2026-11-13",
+        "damageClosed": 52,
+        "negligenceClosed": 3,
+        "atfaultClaimSetup": 9,
+        "negligenceClaimSetup": 23,
+        "total": 87,
+        "source": "직원 제공(정확한 실측치)"
+      },
+      {
+        "date": "2026-11-16",
+        "damageClosed": 56,
+        "negligenceClosed": 1,
+        "atfaultClaimSetup": 4,
+        "negligenceClaimSetup": 35,
+        "total": 96,
+        "source": "직원 제공(정확한 실측치)"
+      },
+      {
+        "date": "2026-11-17",
+        "damageClosed": 94,
+        "negligenceClosed": 55,
+        "atfaultClaimSetup": 40,
+        "negligenceClaimSetup": 33,
+        "total": 222,
+        "source": "자동 계산"
+      }
+    ],
+    "lastSnapshot": {
+      "date": "2026-11-16",
+      "damage_finalized": 1410,
+      "atfault_finalized": 1971,
+      "negligence_finalized": 672,
+      "atfault_pending": 2,
+      "negligence_pending": 29,
+      "note": "2026-11-16 18:00 KST 회차(마지막) 값 - 11/17부터는 이 값 기준으로 매일 자동 계산"
+    }
   }
 }
