@@ -258,7 +258,7 @@
     <div class="sec-head">
       <div class="sec-kicker">Operation Timeline</div>
       <div class="sec-title">실행할수록 쌓이는 처리 실적</div>
-      <div class="sec-desc">날짜별로 자동 실행된 횟수와 처리된 대차 이력 건수입니다. 공휴일에는 스스로 판단해 실행을 건너뛰었습니다.</div>
+      <div class="sec-desc">접수일자 기준으로, 그날 접수된 건 중 종결까지 끝난 건수입니다 (실행 당일 처리량이 아닙니다). 공휴일에는 스스로 판단해 실행을 건너뛰었습니다.</div>
     </div>
     <div class="chart-card">
       <div class="chart-top">
@@ -278,6 +278,9 @@
         </div>
       </div>
       <div class="bars" id="barChart"></div>
+      <div style="margin-top:16px; padding:14px 16px; background:rgba(94,140,255,.08); border:1px solid rgba(94,140,255,.25); border-radius:10px; font-size:13px; color:var(--txt-dim); line-height:1.6;">
+        💡 <b style="color:var(--txt);">최근 며칠이 낮게 나오는 건 자동화가 덜 도는 게 아닙니다.</b> 이 차트는 접수일 기준으로 집계해서, 최근에 접수된 건은 아직 서류 대조·종결 단계를 다 거치지 못해 작게 보일 뿐입니다(종결까지 보통 며칠에서 몇 주 걸림). 자동화는 매 실행마다 OSR 전체 미종결 건(수천 건)을 전수 재검사합니다 — 이 차트에 나오는 숫자는 그중 "이미 종결까지 끝난" 건수일 뿐입니다.
+      </div>
     </div>
   </div>
 </section>
@@ -287,11 +290,11 @@
     <div class="sec-head">
       <div class="sec-kicker">Execution Log · Live</div>
       <div class="sec-title">최근 실행 이력</div>
-      <div class="sec-desc">OSR에서 직접 조회한 날짜별 처리 이력입니다. 행을 클릭하면 처리한 접수번호 전체를 확인·복사할 수 있습니다.</div>
+      <div class="sec-desc">OSR에서 직접 조회한, 접수일 기준 종결 이력입니다(실행 당일 처리량이 아님 — 위 타임라인 설명 참고). 행을 클릭하면 처리한 접수번호 전체를 확인·복사할 수 있습니다.</div>
     </div>
     <div class="chart-card" style="padding:8px 8px 8px;">
       <table class="log-table">
-        <thead><tr><th>실행 시각</th><th>스케줄</th><th>처리 건수</th><th>상태</th></tr></thead>
+        <thead><tr><th>실행 시각</th><th>스케줄</th><th>종결 건수(접수일 기준)</th><th>상태</th></tr></thead>
         <tbody id="logBody"><tr><td colspan="4" style="text-align:center; padding:40px;">불러오는 중...</td></tr></tbody>
       </table>
       <div class="week-nav">
