@@ -285,6 +285,22 @@
   </div>
 </section>
 
+<section class="sec" id="throughput" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-kicker">Real Daily Output</div>
+      <div class="sec-title">하루동안 실제 종결·청구설정한 건수</div>
+      <div class="sec-desc">위 차트와 달리 접수일과 무관하게, 그날 하루 동안 실제로 새로 종결되거나 청구설정된 건수입니다(자동화+직원 전체). 직원 실측치로 검증된 계산식입니다.</div>
+    </div>
+    <div class="chart-card" style="padding:8px 8px 8px;">
+      <table class="log-table">
+        <thead><tr><th>날짜</th><th>피해종결</th><th>과실종결</th><th>가해청구설정</th><th>과실청구설정</th><th>합계</th></tr></thead>
+        <tbody id="throughputBody"><tr><td colspan="6" style="text-align:center; padding:40px;">불러오는 중...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="log" style="padding-top:0;">
   <div class="wrap">
     <div class="sec-head">
@@ -644,6 +660,15 @@ function render(data){
     const chipsEl = document.getElementById('returnDelayChips');
     chipsEl.style.display = 'flex';
     chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${formatMinutesAsHM(d.avgMinutes)} (${d.count}건)</span>`).join('');
+  }
+
+  if(data.dailyThroughput && data.dailyThroughput.daily && data.dailyThroughput.daily.length){
+    const tpBody = document.getElementById('throughputBody');
+    const tpRows = data.dailyThroughput.daily.slice(-14);
+    tpBody.innerHTML = tpRows.map(d => {
+      const dow = ['일','월','화','수','목','금','토'][new Date(d.date+'T00:00:00+09:00').getDay()];
+      return `<tr><td>${d.date}(${dow})</td><td>${d.damageClosed}</td><td>${d.negligenceClosed}</td><td>${d.atfaultClaimSetup}</td><td>${d.negligenceClaimSetup}</td><td><b>${d.total}</b></td></tr>`;
+    }).reverse().join('');
   }
 
   if(data.completionRateTracking){
