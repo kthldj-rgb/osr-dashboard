@@ -4744,11 +4744,11 @@
       },
       {
         "date": "2026-11-18",
-        "damageClosed": 85,
-        "negligenceClosed": 48,
-        "atfaultClaimSetup": 41,
-        "negligenceClaimSetup": 41,
-        "total": 215,
+        "damageClosed": 87,
+        "negligenceClosed": 51,
+        "atfaultClaimSetup": 52,
+        "negligenceClaimSetup": 44,
+        "total": 234,
         "source": "자동 계산"
       }
     ],
