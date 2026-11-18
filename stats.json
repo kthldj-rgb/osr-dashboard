@@ -4751,10 +4751,10 @@
       {
         "date": "2026-11-18",
         "damageClosed": 87,
-        "negligenceClosed": 51,
-        "atfaultClaimSetup": 52,
-        "negligenceClaimSetup": 44,
-        "total": 234,
+        "negligenceClosed": 50,
+        "atfaultClaimSetup": 60,
+        "negligenceClaimSetup": 43,
+        "total": 240,
         "source": "자동 계산"
       }
     ],
