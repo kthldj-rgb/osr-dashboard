@@ -4724,13 +4724,13 @@
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-16",
-      "damage_finalized": 1410,
-      "atfault_finalized": 1971,
-      "negligence_finalized": 672,
+      "date": "2026-11-17",
+      "damage_finalized": 1504,
+      "atfault_finalized": 2011,
+      "negligence_finalized": 727,
       "atfault_pending": 2,
-      "negligence_pending": 29,
-      "note": "2026-11-16 18:00 KST 회차(마지막) 값 - 11/17부터는 이 값 기준으로 매일 자동 계산"
+      "negligence_pending": 7,
+      "note": "2026-11-17 18:10 KST 마지막 정상 값 - 11/18부터는 이 값 기준으로 계산 (11/16 값에서 2026-11-18 정정)"
     }
   }
 }
