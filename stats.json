@@ -9810,11 +9810,11 @@
       },
       {
         "date": "2026-11-19",
-        "damageClosed": 4,
+        "damageClosed": 10,
         "negligenceClosed": 2,
-        "atfaultClaimSetup": 105,
-        "negligenceClaimSetup": 10,
-        "total": 121,
+        "atfaultClaimSetup": 117,
+        "negligenceClaimSetup": 14,
+        "total": 143,
         "source": "자동 계산"
       }
     ],
