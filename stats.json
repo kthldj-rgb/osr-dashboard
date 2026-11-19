@@ -4732,9 +4732,9 @@
         "date": "2026-11-19",
         "damageClosed": 0,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 0,
+        "atfaultClaimSetup": 6,
         "negligenceClaimSetup": 0,
-        "total": 0,
+        "total": 6,
         "source": "자동 계산"
       }
     ],
