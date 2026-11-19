@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T00:22:52.000Z",
+  "lastUpdated": "2026-11-19T00:52:03.000Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4685,
@@ -4656,9 +4656,16 @@
         "count": 122,
         "excludedCount": 11,
         "extractFailedCount": 0
+      },
+      {
+        "date": "2026-11-18",
+        "avgMinutes": 22.2,
+        "count": 118,
+        "excludedCount": 10,
+        "extractFailedCount": 0
       }
     ],
-    "lastComputedDate": "2026-11-17"
+    "lastComputedDate": "2026-11-18"
   },
   "dailyThroughput": {
     "note": "접수일 기준이 아니라 실제로 그 날짜에 새로 종결/청구설정된 건수(자동화+직원 전체). 전날 종료 시점 대비 증감으로 계산.",
