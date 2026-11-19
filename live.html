@@ -26,11 +26,11 @@
   .nav-cta:hover{border-color:var(--accent); color:var(--accent2);}
   .live-hero{padding:48px 0 40px;}
   .hero-stat-strip{
-    display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
+    display:grid; grid-template-columns:repeat(6,1fr); gap:1px;
     background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;
   }
   .hero-stat-cell{background:var(--card); padding:26px 24px;}
-  @media(max-width:860px){ .hero-stat-strip{grid-template-columns:repeat(3,1fr);} }
+  @media(max-width:1100px){ .hero-stat-strip{grid-template-columns:repeat(3,1fr);} }
   @media(max-width:560px){ .hero-stat-strip{grid-template-columns:repeat(2,1fr);} }
   .hero-stat-num{font-size:30px; font-weight:800; letter-spacing:-.02em;}
   .hero-stat-label{margin-top:7px; font-size:14.5px; font-weight:700; color:var(--txt);}
@@ -152,6 +152,11 @@
     </div>
 
     <div class="hero-stat-strip" style="margin-top:36px;">
+      <div class="hero-stat-cell" style="background:linear-gradient(135deg, rgba(126,224,195,.12), rgba(94,140,255,.08));">
+        <div class="hero-stat-num" style="color:var(--accent2);" id="hero-total-handled">-</div>
+        <div class="hero-stat-label">종결+검증 건수</div>
+        <div class="hero-stat-sub">완전 종결 + 청구설정(검증) 완료 합계 — AI가 실제로 처리한 전체 규모</div>
+      </div>
       <div class="hero-stat-cell">
         <div class="hero-stat-num" id="hero-cumulative">-</div>
         <div class="hero-stat-label">누적 종결처리 건수</div>
@@ -195,7 +200,7 @@
     <div class="sec-head">
       <div class="sec-kicker">By Category</div>
       <div class="sec-title">카테고리별 내역 (10/2~)</div>
-      <div class="sec-desc">피해 / 가해 / 과실 각각의 종결 완료 건수와, 직원 종결을 기다리는 대기 건수입니다.</div>
+      <div class="sec-desc">피해 / 가해 / 과실 각각 AI가 실제로 종결·검증까지 처리한 전체 건수입니다(완전 종결 + 직원 종결 대기 중인 검증완료건 합산).</div>
     </div>
     <div class="cat-grid" id="catGrid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;"></div>
   </div>
@@ -370,13 +375,14 @@ function renderCategoryGrid(cb){
     const d = cb[c.key];
     if(!d) return;
     const pendingVal = d[c.pendingKey];
+    const totalHandled = d.finalized + pendingVal;
     const card = document.createElement('div');
     card.className = 'cat-card';
     card.innerHTML = `
       <div class="cat-name"><span class="cat-dot" style="background:${c.color}"></span>${c.label}</div>
-      <div class="cat-main">${d.finalized.toLocaleString()}</div>
-      <div class="cat-main-label">종결 완료 (10/2~)</div>
-      <div class="cat-sub"><b>${pendingVal.toLocaleString()}</b>건
+      <div class="cat-main">${totalHandled.toLocaleString()}</div>
+      <div class="cat-main-label">종결+검증 건수 (10/2~, 실제 처리량)</div>
+      <div class="cat-sub"><b>${d.finalized.toLocaleString()}</b>건 종결 + <b>${pendingVal.toLocaleString()}</b>건
         <div class="cat-sub-label">${d.pendingNote || c.pendingLabel}</div>
       </div>`;
     catGrid.appendChild(card);
@@ -654,6 +660,9 @@ function render(data){
     }
     if(ht.pendingStaffFinalization){
       document.getElementById('hero-pending').textContent = ht.pendingStaffFinalization.count.toLocaleString();
+    }
+    if(ht.cumulativeFinalized && ht.pendingStaffFinalization){
+      document.getElementById('hero-total-handled').textContent = (ht.cumulativeFinalized.count + ht.pendingStaffFinalization.count).toLocaleString();
     }
     if(ht.categoryBreakdown){
       renderCategoryGrid(ht.categoryBreakdown);
