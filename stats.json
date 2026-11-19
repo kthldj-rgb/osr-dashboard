@@ -9772,11 +9772,11 @@
       },
       {
         "date": "2026-11-19",
-        "damageClosed": 0,
+        "damageClosed": 4,
         "negligenceClosed": 2,
-        "atfaultClaimSetup": 97,
-        "negligenceClaimSetup": 7,
-        "total": 106,
+        "atfaultClaimSetup": 105,
+        "negligenceClaimSetup": 10,
+        "total": 121,
         "source": "자동 계산"
       }
     ],
