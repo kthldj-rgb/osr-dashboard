@@ -403,7 +403,7 @@ function applyCustomRange(){
 function renderChart(daily){
   const barChart = document.getElementById('barChart');
   barChart.innerHTML = '';
-  const max = Math.max(...daily.map(d=>d.cases), 1);
+  const max = Math.max(...daily.map(d=>(d.cases ?? d.count ?? 0)), 1);
   const weekday = ['일','월','화','수','목','금','토'];
   let prevPhase = null;
   daily.forEach((d,i)=>{
@@ -417,14 +417,15 @@ function renderChart(daily){
     const dateObj = new Date(d.date + 'T00:00:00+09:00');
     const label = (dateObj.getMonth()+1).toString().padStart(2,'0')+'/'+dateObj.getDate().toString().padStart(2,'0');
     const wd = weekday[dateObj.getDay()];
-    const isHoliday = d.cases === 0;
-    const h = isHoliday ? 18 : Math.max(14, (d.cases/max)*170);
+    const dCases = d.cases ?? d.count ?? 0;
+    const isHoliday = dCases === 0;
+    const h = isHoliday ? 18 : Math.max(14, (dCases/max)*170);
     const barClass = isHoliday ? 'holiday' : (d.phase === 'manual' ? 'manual' : '');
     const col = document.createElement('div');
     col.className = 'bar-col';
     col.innerHTML = `
       <div class="bar ${barClass}" style="height:${h}px">
-        <div class="bar-val">${isHoliday ? '-' : d.cases+'건'}</div>
+        <div class="bar-val">${isHoliday ? '-' : dCases+'건'}</div>
       </div>
       <div class="bar-date"><b>${label}</b>${wd}</div>`;
     barChart.appendChild(col);
