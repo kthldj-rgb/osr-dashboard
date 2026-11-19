@@ -5,10 +5,10 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OSR 대차이력 자동처리 AI 에이전트 · 소개</title>
-<meta name="description" content="OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI 자동화. 2026.10.2 자동화 전환 이후 누적 3,100건+ 종결처리.">
+<meta name="description" content="OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI 자동화. 2026.10.2 자동화 전환 이후 누적 4,500건+ 종결·검증 처리.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="OSR 대차이력 자동처리 AI 에이전트">
-<meta property="og:description" content="반복적인 OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI. 누적 종결처리 건수와 운영 현황을 실시간으로 확인하세요.">
+<meta property="og:description" content="반복적인 OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI. 누적 종결+검증 건수와 운영 현황을 실시간으로 확인하세요.">
 <meta property="og:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="OSR 대차이력 자동처리 AI 에이전트">
 <meta name="twitter:description" content="반복적인 OSR 대차이력 처리를 사람 대신 끝까지 해내는 AI.">
 <meta name="twitter:image" content="https://kthldj-rgb.github.io/osr-dashboard/og-image.jpg">
-<link rel="stylesheet" href="styles.css?v=3">
+<link rel="stylesheet" href="styles.css?v=4">
 <style>
   .nav-cta{
     padding:8px 16px; border-radius:9px; font-size:12.5px; font-weight:700;
@@ -112,7 +112,7 @@
     </div>
     <div class="mini-stats" id="miniStats">
       <div class="mini-stat"><b id="mini-days">-</b><span>자동화 시작 후 경과일</span></div>
-      <div class="mini-stat"><b id="mini-cumulative">-</b><span>누적 종결처리 건수</span></div>
+      <div class="mini-stat"><b id="mini-cumulative">-</b><span>종결+검증 건수 (누적)</span></div>
       <div class="mini-stat"><b>90일</b><span>매 실행 재점검 범위</span></div>
     </div>
   </div>
@@ -215,6 +215,30 @@
           <div class="cs-text"><b class="ok">"목록 클릭 → 2초 대기 → 실제 썸네일 스크린샷 확인"</b>을 새 필수 절차로 운영 메모리에 반영, 다음 실행부터 즉시 적용.</div></div>
       </div>
     </div>
+
+    <div class="case-study" style="margin-top:24px;">
+      <div>
+        <div class="cs-head">
+          <b>데이터가 조용히 틀릴 뻔한 걸 스스로 잡아냈습니다</b>
+          <p>네트워크 순간 끊김으로 받은 엑셀 파일이 다른 필터 결과랑 섞였던 걸, 자체 검증 절차가 그 자리에서 잡아냈고, 이를 계기로 전체 안전망을 다시 지었습니다.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric"><div class="n">4개 전체</div><div class="l">검증 범위를 엑셀 1개→4개 전체로 확장</div></div>
+          <div class="cs-metric"><div class="n">3중 안전망</div><div class="l">파일검증+이상치감지+경고배너</div></div>
+          <div class="cs-metric"><div class="n">0건</div><div class="l">틀린 수치가 공개된 채 남은 사례</div></div>
+        </div>
+      </div>
+      <div class="cs-timeline">
+        <div class="cs-item"><div class="cs-time">STEP 1 · 이상 징후 포착</div>
+          <div class="cs-text">반납완료 엑셀을 받는 중 연결이 짧게 끊기면서, 받은 파일이 실제로는 <b>직전 필터(종결처리) 데이터가 그대로 다시 받아진 것</b>임을 자체 검증에서 포착.</div></div>
+        <div class="cs-item"><div class="cs-time">STEP 2 · 즉시 재검증</div>
+          <div class="cs-text">받은 파일을 그 자리에서 다시 열어 진행상태 컬럼이 의도한 필터와 일치하는지 확인하는 절차를 <b>이번에 처음 도입</b>해, 설정이 틀렸다는 걸 바로 잡아내고 재다운로드.</div></div>
+        <div class="cs-item"><div class="cs-time">STEP 3 · 검증 범위 확장</div>
+          <div class="cs-text">이번 건은 엑셀 1개에서만 났지만, <b>매번 내려받는 엑셀 4개 전부</b>에 같은 검증 절차를 적용하도록 운영 규칙을 즉시 확장.</div></div>
+        <div class="cs-item"><div class="cs-time">STEP 4 · 이상치 자동감지망 구축</div>
+          <div class="cs-text">단순 검증을 넘어, 직전 값 대비 수치가 비정상적으로 뛰는 순간 <b class="ok">화면에 경고 배너가 뜨고 알림이 가는 삼중 안전망</b>을 구축 — 비슷한 문제가 다시 생겨도 조용히 틀린 수치가 나가는 일은 없습니다.</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -243,8 +267,9 @@ fetch('stats.json', { cache: 'no-store' }).then(r=>r.json()).then(data=>{
     const days = Math.floor((now - start) / 86400000) + 1;
     document.getElementById('mini-days').textContent = days + '일';
   }
-  if(data.handoffTracking?.cumulativeFinalized){
-    document.getElementById('mini-cumulative').textContent = data.handoffTracking.cumulativeFinalized.count.toLocaleString() + '건';
+  if(data.handoffTracking?.cumulativeFinalized && data.handoffTracking?.pendingStaffFinalization){
+    const miniTotal = data.handoffTracking.cumulativeFinalized.count + data.handoffTracking.pendingStaffFinalization.count;
+    document.getElementById('mini-cumulative').textContent = miniTotal.toLocaleString() + '건';
   }
 }).catch(()=>{});
 </script>
