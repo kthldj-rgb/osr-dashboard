@@ -264,6 +264,11 @@
     <div class="chart-card" id="returnDelayCard">
       <div style="color:var(--txt-faint); font-size:13px; text-align:center; padding:30px;" id="returnDelayEmpty">데이터 수집 중… 첫 집계는 다음 일별 배치에서 반영됩니다.</div>
       <div class="case-chips" id="returnDelayChips" style="display:none;"></div>
+      <div class="week-nav" id="returnDelayNav" style="display:none;">
+        <button id="rdPrev" onclick="changeReturnDelayPage(1)">← 이전</button>
+        <span><b id="rdPageLabel">-</b></span>
+        <button id="rdNext" onclick="changeReturnDelayPage(-1)">다음 →</button>
+      </div>
     </div>
   </div>
 </section>
@@ -458,6 +463,26 @@ function badgeFor(status, cases){
 
 let allRunsData = [];
 let weekOffset = 0;
+
+let returnDelayFullData = [];
+let returnDelayPage = 0;
+const RD_PAGE_SIZE = 14;
+function renderReturnDelayPage(){
+  const chipsEl = document.getElementById('returnDelayChips');
+  chipsEl.style.display = 'flex';
+  const sorted = [...returnDelayFullData].reverse(); // 최신순
+  const start = returnDelayPage * RD_PAGE_SIZE;
+  const pageItems = sorted.slice(start, start + RD_PAGE_SIZE).reverse(); // 다시 오래된순으로 표시
+  chipsEl.innerHTML = pageItems.map(d => `<span class="case-chip">${d.date}: 평균 ${formatMinutesAsHM(d.avgMinutes)} (${d.count}건)</span>`).join('');
+  const totalPages = Math.max(1, Math.ceil(sorted.length / RD_PAGE_SIZE));
+  document.getElementById('rdPageLabel').textContent = `${returnDelayPage+1} / ${totalPages} 페이지 (총 ${returnDelayFullData.length}일)`;
+  document.getElementById('rdPrev').disabled = (returnDelayPage+1) >= totalPages;
+  document.getElementById('rdNext').disabled = returnDelayPage <= 0;
+}
+function changeReturnDelayPage(delta){
+  returnDelayPage = Math.max(0, returnDelayPage + delta);
+  renderReturnDelayPage();
+}
 
 function getWeekBounds(refDateMs, offset){
   const end = new Date(refDateMs - offset*7*24*3600*1000);
@@ -678,11 +703,11 @@ function render(data){
   }
 
   if(data.returnDelayTracking && data.returnDelayTracking.daily && data.returnDelayTracking.daily.length){
-    const rd = data.returnDelayTracking.daily;
     document.getElementById('returnDelayEmpty').style.display = 'none';
-    const chipsEl = document.getElementById('returnDelayChips');
-    chipsEl.style.display = 'flex';
-    chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${formatMinutesAsHM(d.avgMinutes)} (${d.count}건)</span>`).join('');
+    returnDelayFullData = data.returnDelayTracking.daily;
+    returnDelayPage = 0;
+    document.getElementById('returnDelayNav').style.display = returnDelayFullData.length > RD_PAGE_SIZE ? 'flex' : 'none';
+    renderReturnDelayPage();
   }
 
   if(data.dataQualityFlags && data.dataQualityFlags.length){
