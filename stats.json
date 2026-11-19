@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-19T00:52:23.000Z",
+  "lastUpdated": "2026-11-19T01:10:19.000Z",
   "totals": {
     "totalRuns": 55,
-    "uniqueCases": 4685,
+    "uniqueCases": 4687,
     "activeDays": 55,
     "projectStart": "2026-09-21",
     "automationStart": "2026-10-02"
@@ -1174,8 +1174,8 @@
         "20261015A00035",
         "20261015A00034",
         "20261015A00032",
-        "20261015A00031",
         "20261015A00030",
+        "20261015A00031",
         "20261015A00029",
         "20261015A00028",
         "20261015A00027",
@@ -4424,15 +4424,15 @@
     ],
     "cumulativeFinalized": {
       "count": 4508,
-      "lastChecked": "2026-11-19T00:22:52.000Z"
+      "lastChecked": "2026-11-19T01:10:19.000Z"
     },
     "pendingStaffFinalization": {
-      "count": 18,
+      "count": 17,
       "breakdown": {
-        "atfault": 9,
+        "atfault": 8,
         "negligence": 9
       },
-      "lastChecked": "2026-11-19T00:22:52.000Z"
+      "lastChecked": "2026-11-19T01:10:19.000Z"
     },
     "categoryBreakdown": {
       "damage": {
@@ -4441,7 +4441,7 @@
       },
       "atfault": {
         "finalized": 2087,
-        "pendingStaffFinalization": 9
+        "pendingStaffFinalization": 8
       },
       "negligence": {
         "finalized": 778,
@@ -4449,7 +4449,7 @@
       }
     },
     "indicatorA": 4508,
-    "indicatorB": 18
+    "indicatorB": 17
   },
   "overdueTracking": {
     "count": 145,
@@ -4600,10 +4600,10 @@
     }
   },
   "completionRateTracking": {
-    "A_total": 2805,
+    "A_total": 2806,
     "finalized": 2117,
-    "pending": 688,
-    "completionRate": 75.47
+    "pending": 689,
+    "completionRate": 75.45
   },
   "returnDelayTracking": {
     "note": "렌터카 반납 업로드 평균 지연 시간. 일자별로, 그날 반납일시에 해당하는 건들에 대해 max(반납완료 로그시각, 계약서저장 로그시각) - 반납일시(필드값)의 평균(분). 협력업체 전산입력 기강해이 확인용. 강현우 사원 요청으로 2026-11-09 추가, 매일 전일분을 배치로 계산.",
