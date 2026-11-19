@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T06:13:00.000Z",
+  "lastUpdated": "2026-11-19T06:15:37.815Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4725,
@@ -9740,11 +9740,10 @@
         "date": "2026-11-19",
         "damageClosed": 0,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 86,
-        "negligenceClaimSetup": 0,
-        "total": 86,
-        "source": "자동 계산",
-        "note": "가해청구설정(86) 중 상당수는 실제 오늘 처리량이 아니라, 14:10 회차에서 엑셀2(RT) 다운로드 오류(연결 끊김으로 이전 필터 데이터를 잘못 받음)를 발견·수정하면서 기준값이 한 번에 뛴 영향입니다. 실제 오늘 신규 처리량과 혼동하지 마세요."
+        "atfaultClaimSetup": 92,
+        "negligenceClaimSetup": 3,
+        "total": 95,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
