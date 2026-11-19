@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T00:52:03.000Z",
+  "lastUpdated": "2026-11-19T00:52:23.000Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4685,
@@ -4715,16 +4715,25 @@
         "negligenceClaimSetup": 44,
         "total": 252,
         "source": "자동 계산"
+      },
+      {
+        "date": "2026-11-19",
+        "damageClosed": 0,
+        "negligenceClosed": 0,
+        "atfaultClaimSetup": 0,
+        "negligenceClaimSetup": 0,
+        "total": 0,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-17",
-      "damage_finalized": 1504,
-      "atfault_finalized": 2011,
-      "negligence_finalized": 727,
-      "atfault_pending": 2,
-      "negligence_pending": 7,
-      "note": "2026-11-17 18:10 KST 마지막 정상 값 - 11/18부터는 이 값 기준으로 계산 (11/16 값에서 2026-11-18 정정)"
+      "date": "2026-11-18",
+      "damage_finalized": 1643,
+      "atfault_finalized": 2087,
+      "negligence_finalized": 778,
+      "atfault_pending": 9,
+      "negligence_pending": 9,
+      "note": "2026-11-19 09:xx KST 첫 실행 때 갱신 - 11/18 마감(=11/19 시작) 기준값. 다음날(11/20) 첫 실행에만 다시 갱신됨."
     }
   }
 }
