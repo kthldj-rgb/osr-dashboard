@@ -670,7 +670,9 @@ function render(data){
     const tpRows = data.dailyThroughput.daily.slice(-14);
     tpBody.innerHTML = tpRows.map(d => {
       const dow = ['일','월','화','수','목','금','토'][new Date(d.date+'T00:00:00+09:00').getDay()];
-      return `<tr><td>${d.date}(${dow})</td><td>${d.damageClosed}</td><td>${d.negligenceClosed}</td><td>${d.atfaultClaimSetup}</td><td>${d.negligenceClaimSetup}</td><td><b>${d.total}</b></td></tr>`;
+      const mainRow = `<tr><td>${d.date}(${dow})${d.note ? ' ⚠️' : ''}</td><td>${d.damageClosed}</td><td>${d.negligenceClosed}</td><td>${d.atfaultClaimSetup}</td><td>${d.negligenceClaimSetup}</td><td><b>${d.total}</b></td></tr>`;
+      const noteRow = d.note ? `<tr><td colspan="6" style="font-size:12px; color:var(--warn); padding:4px 16px 12px; border-bottom:1px solid var(--line);">⚠️ ${d.note}</td></tr>` : '';
+      return mainRow + noteRow;
     }).reverse().join('');
   }
 
