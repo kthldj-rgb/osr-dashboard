@@ -26,11 +26,11 @@
   .nav-cta:hover{border-color:var(--accent); color:var(--accent2);}
   .live-hero{padding:48px 0 40px;}
   .hero-stat-strip{
-    display:grid; grid-template-columns:repeat(6,1fr); gap:1px;
+    display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
     background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;
   }
   .hero-stat-cell{background:var(--card); padding:26px 24px;}
-  @media(max-width:1100px){ .hero-stat-strip{grid-template-columns:repeat(3,1fr);} }
+  @media(max-width:860px){ .hero-stat-strip{grid-template-columns:repeat(3,1fr);} }
   @media(max-width:560px){ .hero-stat-strip{grid-template-columns:repeat(2,1fr);} }
   .hero-stat-num{font-size:30px; font-weight:800; letter-spacing:-.02em;}
   .hero-stat-label{margin-top:7px; font-size:14.5px; font-weight:700; color:var(--txt);}
@@ -151,12 +151,13 @@
       </div>
     </div>
 
-    <div class="hero-stat-strip" style="margin-top:36px;">
-      <div class="hero-stat-cell" style="background:linear-gradient(135deg, rgba(126,224,195,.12), rgba(94,140,255,.08));">
-        <div class="hero-stat-num" style="color:var(--accent2);" id="hero-total-handled">-</div>
-        <div class="hero-stat-label">종결+검증 건수</div>
-        <div class="hero-stat-sub">완전 종결 + 청구설정(검증) 완료 합계 — AI가 실제로 처리한 전체 규모</div>
-      </div>
+    <div style="margin-top:40px; padding:32px 36px; border-radius:20px; background:linear-gradient(135deg, rgba(126,224,195,.14), rgba(94,140,255,.08)); border:1px solid rgba(126,224,195,.3); text-align:center;">
+      <div style="font-size:14px; font-weight:700; letter-spacing:.04em; color:var(--accent2); text-transform:uppercase;">AI가 실제로 처리한 전체 규모</div>
+      <div style="font-size:clamp(52px,8vw,88px); font-weight:800; color:var(--accent2); line-height:1.1; margin-top:6px;" id="hero-total-handled">-</div>
+      <div style="font-size:15px; color:var(--txt-dim); margin-top:8px;">종결+검증 건수 · 완전 종결된 건 + 청구설정(검증)까지 끝낸 건의 합계입니다</div>
+    </div>
+
+    <div class="hero-stat-strip" style="margin-top:20px;">
       <div class="hero-stat-cell">
         <div class="hero-stat-num" id="hero-cumulative">-</div>
         <div class="hero-stat-label">누적 종결처리 건수</div>
