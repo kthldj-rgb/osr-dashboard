@@ -9758,10 +9758,10 @@
       {
         "date": "2026-11-19",
         "damageClosed": 0,
-        "negligenceClosed": 0,
-        "atfaultClaimSetup": 92,
-        "negligenceClaimSetup": 3,
-        "total": 95,
+        "negligenceClosed": 2,
+        "atfaultClaimSetup": 97,
+        "negligenceClaimSetup": 7,
+        "total": 106,
         "source": "자동 계산"
       }
     ],
