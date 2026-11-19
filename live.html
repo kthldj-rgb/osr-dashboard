@@ -181,6 +181,15 @@
   </div>
 </header>
 
+<div id="dataQualityBanner" style="display:none; background:#3d1f1f; border-top:1px solid #7a3a3a; border-bottom:1px solid #7a3a3a; padding:14px 0;">
+  <div class="wrap">
+    <div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:#ffb3b3;">
+      <span style="font-size:18px; line-height:1;">⚠️</span>
+      <div id="dataQualityBannerText"><b>데이터 품질 경고:</b> 일부 수치가 직전 대비 비정상적으로 변동해 확인이 필요합니다.</div>
+    </div>
+  </div>
+</div>
+
 <section class="sec" id="category" style="padding-top:12px;">
   <div class="wrap">
     <div class="sec-head">
@@ -664,6 +673,13 @@ function render(data){
     const chipsEl = document.getElementById('returnDelayChips');
     chipsEl.style.display = 'flex';
     chipsEl.innerHTML = rd.slice(-14).map(d => `<span class="case-chip">${d.date}: 평균 ${formatMinutesAsHM(d.avgMinutes)} (${d.count}건)</span>`).join('');
+  }
+
+  if(data.dataQualityFlags && data.dataQualityFlags.length){
+    const banner = document.getElementById('dataQualityBanner');
+    const bannerText = document.getElementById('dataQualityBannerText');
+    banner.style.display = 'block';
+    bannerText.innerHTML = '<b>⚠️ 데이터 품질 경고 (' + data.dataQualityFlags.length + '건):</b> ' + data.dataQualityFlags.map(f => `[${f.date || ''}] ${f.metric || ''}: ${f.reason || ''}`).join(' &nbsp;|&nbsp; ');
   }
 
   if(data.dailyThroughput && data.dailyThroughput.daily && data.dailyThroughput.daily.length){
