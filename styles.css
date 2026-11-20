@@ -150,8 +150,8 @@
   .cs-head b{font-size:22px; display:block; margin-bottom:12px; letter-spacing:-.01em;}
   .cs-head p{color:var(--txt-dim); font-size:16px; margin-bottom:18px;}
   .cs-metrics{display:flex; gap:14px; margin-top:22px;}
-  .cs-metric{flex:1; background:rgba(0,0,0,.2); border:1px solid var(--line); border-radius:12px; padding:16px;}
-  .cs-metric .n{font-size:24px; font-weight:800;}
+  .cs-metric{flex:1; background:rgba(0,0,0,.2); border:1px solid var(--line); border-radius:12px; padding:16px 10px;}
+  .cs-metric .n{font-size:24px; font-weight:800; white-space:nowrap; letter-spacing:-.02em;}
   .cs-metric .l{font-size:13.5px; color:var(--txt-dim); margin-top:3px; line-height:1.4;}
 
   .log-table{width:100%; border-collapse:collapse; font-size:13px;}
