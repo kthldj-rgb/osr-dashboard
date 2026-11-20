@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T01:14:35.552Z",
+  "lastUpdated": "2026-11-20T01:17:45.128Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4584,
@@ -9527,11 +9527,10 @@
         "date": "2026-11-20",
         "damageClosed": 0,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 0,
+        "atfaultClaimSetup": 1,
         "negligenceClaimSetup": 0,
-        "total": 0,
-        "source": "자동 계산",
-        "note": "당일 첫 실행 - lastSnapshot을 방금 이 값으로 새로 설정했기 때문에 시작 시점 처리량은 0."
+        "total": 1,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
