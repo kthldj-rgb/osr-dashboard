@@ -58,6 +58,10 @@
     background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
   }
   .subtitle{margin-top:20px; font-size:19.5px; color:var(--txt-dim); max-width:980px; line-height:1.65;}
+  .sum-list{list-style:none; margin-top:16px; display:flex; flex-direction:column; gap:11px; max-width:760px;}
+  .sum-list li{position:relative; padding-left:28px; font-size:16.5px; color:var(--txt-dim); line-height:1.5;}
+  .sum-list li::before{content:"\2713"; position:absolute; left:0; top:0; color:var(--accent2); font-weight:800;}
+  .sum-list b{color:var(--accent2); font-weight:800;}
   .hero-cta{display:flex; gap:12px; margin-top:34px; flex-wrap:wrap; align-items:center;}
   .btn{
     padding:12px 22px; border-radius:11px; font-size:14px; font-weight:700; text-decoration:none;
