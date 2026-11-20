@@ -57,7 +57,7 @@
   h1.title .grad{
     background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
   }
-  .subtitle{margin-top:20px; font-size:16.5px; color:var(--txt-dim); max-width:980px; line-height:1.7;}
+  .subtitle{margin-top:20px; font-size:19.5px; color:var(--txt-dim); max-width:980px; line-height:1.65;}
   .hero-cta{display:flex; gap:12px; margin-top:34px; flex-wrap:wrap; align-items:center;}
   .btn{
     padding:12px 22px; border-radius:11px; font-size:14px; font-weight:700; text-decoration:none;
