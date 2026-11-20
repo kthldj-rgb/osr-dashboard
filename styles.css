@@ -149,6 +149,7 @@
   .cs-text b{color:var(--warn);} .cs-text b.ok{color:var(--accent2);}
   .cs-head b{font-size:22px; display:block; margin-bottom:12px; letter-spacing:-.01em;}
   .cs-head p{color:var(--txt-dim); font-size:16px; margin-bottom:18px;}
+  .why-highlight{position:relative; background:linear-gradient(135deg, rgba(91,140,255,.1), rgba(126,224,195,.05)); border:1px solid rgba(91,140,255,.3); border-radius:22px; padding:34px 38px; box-shadow:0 0 0 1px rgba(91,140,255,.08), 0 20px 50px -25px rgba(91,140,255,.35);}
   .cs-metrics{display:flex; gap:14px; margin-top:22px;}
   .cs-metric{flex:1; background:rgba(0,0,0,.2); border:1px solid var(--line); border-radius:12px; padding:16px 10px;}
   .cs-metric .n{font-size:24px; font-weight:800; white-space:nowrap; letter-spacing:-.02em;}
