@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T07:10:13.600Z",
+  "lastUpdated": "2026-11-20T07:13:45.986Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4868,
@@ -9219,8 +9219,8 @@
       "마스타"
     ],
     "cumulativeFinalized": {
-      "count": 4621,
-      "lastChecked": "2026-11-20T06:15:03.000Z"
+      "count": 4628,
+      "lastChecked": "2026-11-20T07:13:45.986Z"
     },
     "pendingStaffFinalization": {
       "count": 28,
@@ -9228,7 +9228,7 @@
         "atfault": 2,
         "negligence": 26
       },
-      "lastChecked": "2026-11-20T06:15:03.000Z"
+      "lastChecked": "2026-11-20T07:13:45.986Z"
     },
     "categoryBreakdown": {
       "damage": {
