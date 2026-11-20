@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T01:01:47.403Z",
+  "lastUpdated": "2026-11-20T01:03:17.167Z",
   "totals": {
     "totalRuns": 55,
     "uniqueCases": 4766,
@@ -9523,16 +9523,26 @@
         "negligenceClaimSetup": 14,
         "total": 143,
         "source": "자동 계산"
+      },
+      {
+        "date": "2026-11-20",
+        "damageClosed": 0,
+        "negligenceClosed": 0,
+        "atfaultClaimSetup": 0,
+        "negligenceClaimSetup": 0,
+        "total": 0,
+        "source": "자동 계산",
+        "note": "당일 첫 실행 - lastSnapshot을 방금 이 값으로 새로 설정했기 때문에 시작 시점 처리량은 0."
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-18",
-      "damage_finalized": 1643,
-      "atfault_finalized": 2087,
+      "date": "2026-11-19",
+      "damage_finalized": 1659,
+      "atfault_finalized": 2146,
       "negligence_finalized": 778,
-      "atfault_pending": 9,
-      "negligence_pending": 9,
-      "note": "2026-11-19 09:xx KST 첫 실행 때 갱신 - 11/18 마감(=11/19 시작) 기준값. 다음날(11/20) 첫 실행에만 다시 갱신됨."
+      "atfault_pending": 7,
+      "negligence_pending": 26,
+      "note": "2026-11-20 09:3x KST 첫 실행 때 갱신 - 11/19 마감(=11/20 시작) 기준값. 다음날(11/21) 첫 실행에만 다시 갱신됨."
     }
   },
   "dataQualityFlags": [
