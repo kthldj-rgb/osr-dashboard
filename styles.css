@@ -147,6 +147,7 @@
   .cs-time{font-size:12.5px; color:var(--accent2); font-weight:700; letter-spacing:.03em;}
   .cs-text{font-size:15px; margin-top:5px; color:var(--txt); line-height:1.6;}
   .cs-text b{color:var(--warn);} .cs-text b.ok{color:var(--accent2);}
+  .subtitle b, .sec-desc b, .pbody p b, .cs-head p b{color:var(--accent2); font-weight:800;}
   .cs-head b{font-size:22px; display:block; margin-bottom:12px; letter-spacing:-.01em;}
   .cs-head p{color:var(--txt-dim); font-size:16px; margin-bottom:18px;}
   .why-highlight{position:relative; background:linear-gradient(135deg, rgba(91,140,255,.1), rgba(126,224,195,.05)); border:1px solid rgba(91,140,255,.3); border-radius:22px; padding:34px 38px; box-shadow:0 0 0 1px rgba(91,140,255,.08), 0 20px 50px -25px rgba(91,140,255,.35);}
