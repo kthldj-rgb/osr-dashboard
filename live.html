@@ -312,7 +312,7 @@
       <div class="sec-title">하루동안 실제 종결·청구설정한 건수</div>
       <div class="sec-desc">위 차트와 달리 접수일과 무관하게, 그날 하루 동안 실제로 새로 종결되거나 청구설정된 건수입니다(자동화+직원 전체). 직원 실측치로 검증된 계산식입니다.</div>
       <div style="margin-bottom:20px; padding:14px 16px; background:rgba(126,224,195,.08); border:1px solid rgba(126,224,195,.25); border-radius:10px; font-size:13px; color:var(--txt-dim); line-height:1.6;">
-        📦 <b style="color:var(--txt);">택배로 비유하면 쉽습니다.</b> 위 차트 "11/18: 2건"은 <b>"11월 18일에 주문한</b> 물건 중 지금까지 배송 완료된 게 2개뿐"이라는 뜻이고(나머지는 아직 배송 중), 아래 표 "11/18: 252건"은 <b>"11월 18일 하루 동안 택배기사가 실제로 배송 완료한</b> 물건이 252개"라는 뜻입니다(그중 대부분은 멼칠 전·몇 주 전에 주문했던 게 이제야 도착한 것). 같은 "252건" 안에 11/18에 주문하고 11/18에 바로 배송된 건(2건)과, 예전에 주문했던 게 이제야 도착한 건(250건)이 섮여있는 거예요. 위 차트 = "그날 주문한 건의 배송 진행률", 이 표 = "그날 실제 배송 완료 개수"로 서로 다른 질문에 답하는 표입니다. <b style="color:var(--accent2);">이 표(아래)의 숫자는 OSR 전산에 기록된 값을 그대로 가져온 것이지, 추정치가 아닙니다.</b>
+        📦 <b style="color:var(--txt);">택배로 비유하면 쉽습니다.</b> 위 차트 "11/18: 2건"은 <b>"11월 18일에 주문한</b> 물건 중 지금까지 배송 완료된 게 2개뿐"이라는 뜻이고(나머지는 아직 배송 중), 아래 표 "11/18: 252건"은 <b>"11월 18일 하루 동안 택배기사가 실제로 배송 완료한</b> 물건이 252개"라는 뜻입니다(그중 대부분은 며칠 전·몇 주 전에 주문했던 게 이제야 도착한 것). 같은 "252건" 안에 11/18에 주문하고 11/18에 바로 배송된 건(2건)과, 예전에 주문했던 게 이제야 도착한 건(250건)이 섞여있는 거예요. 위 차트 = "그날 주문한 건의 배송 진행률", 이 표 = "그날 실제 배송 완료 개수"로 서로 다른 질문에 답하는 표입니다. <b style="color:var(--accent2);">이 표(아래)의 숫자는 OSR 전산에 기록된 값을 그대로 가져온 것이지, 추정치가 아닙니다.</b>
       </div>
     </div>
     <div class="chart-card" style="padding:8px 8px 8px;">
@@ -591,7 +591,7 @@ function updateTriggerStatus(category, t){
     return;
   }
   if(t.status === 'pending'){
-    el.textContent = '⏳ 대기 중 (곷 시작)';
+    el.textContent = '⏳ 대기 중 (곧 시작)';
     el.className = 'trigger-status pending';
     btn.disabled = true;
   } else if(t.status === 'running'){
