@@ -9566,9 +9566,9 @@
         "date": "2026-11-20",
         "damageClosed": 0,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 47,
+        "atfaultClaimSetup": 57,
         "negligenceClaimSetup": 0,
-        "total": 47,
+        "total": 57,
         "source": "자동 계산"
       }
     ],
