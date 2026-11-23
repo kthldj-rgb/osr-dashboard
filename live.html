@@ -645,6 +645,26 @@ function copyOverdueList(evt){
   });
 }
 
+function dailyToRunLike(d){
+  return {
+    id: 'daily-' + d.date,
+    created: d.date + 'T09:00:00+09:00',
+    status: 'idle',
+    title: '일별 OSR 갱신 (자동화+수기 처리 전체)',
+    cases: d.count,
+    caseNumbers: d.caseNumbers || [],
+  };
+}
+
+function buildCombinedRuns(runs, daily){
+  const legitRuns = (runs || []).filter(r => r.created);
+  const legitRunDates = new Set(legitRuns.map(r => r.created.slice(0,10)));
+  const dailyRuns = (daily || [])
+    .filter(d => !legitRunDates.has(d.date))
+    .map(dailyToRunLike);
+  return [...legitRuns, ...dailyRuns];
+}
+
 function renderLog(runs){
   allRunsData = runs;
   weekOffset = 0;
@@ -677,7 +697,7 @@ function render(data){
     chartToEl.max = fullDailyData[fullDailyData.length-1].date;
   }
   applyChartRange(currentRangeDays);
-  renderLog(data.runs);
+  renderLog(buildCombinedRuns(data.runs, data.daily));
 
   if(data.handoffTracking){
     const ht = data.handoffTracking;
