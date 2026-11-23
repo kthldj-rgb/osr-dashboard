@@ -6514,11 +6514,11 @@
       },
       {
         "date": "2026-11-23",
-        "damageClosed": 47,
+        "damageClosed": 51,
         "negligenceClosed": 42,
         "atfaultClaimSetup": 137,
         "negligenceClaimSetup": 20,
-        "total": 246,
+        "total": 250,
         "source": "자동 계산"
       }
     ],
