@@ -9710,16 +9710,26 @@
         "negligenceClaimSetup": 0,
         "total": 57,
         "source": "자동 계산"
+      },
+      {
+        "date": "2026-11-23",
+        "damageClosed": 44,
+        "negligenceClosed": 2,
+        "atfaultClaimSetup": 70,
+        "negligenceClaimSetup": 28,
+        "total": 144,
+        "source": "자동 계산",
+        "note": "11/21~22 주말 경과 후 첫 영업일(월) 실적 - 금요일(11/20) 마감 대비 누적 변동치"
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-19",
+      "date": "2026-11-23",
       "damage_finalized": 1659,
       "atfault_finalized": 2146,
       "negligence_finalized": 778,
       "atfault_pending": 7,
       "negligence_pending": 26,
-      "note": "2026-11-20 09:3x KST 첫 실행 때 갱신 - 11/19 마감(=11/20 시작) 기준값. 다음날(11/21) 첫 실행에만 다시 갱신됨."
+      "note": "2026-11-23 09:xx KST 첫 실행 때 갱신(주말 11/21~22 경과) - 11/20 마감(=11/23 시작) 기준값, 숫자는 11/19 스냅샷 그대로 유지. 다음날(11/24) 첫 실행에만 다시 갱신됨."
     }
   },
   "dataQualityFlags": [
