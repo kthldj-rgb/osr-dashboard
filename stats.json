@@ -6804,9 +6804,9 @@
         "date": "2026-11-23",
         "damageClosed": 46,
         "negligenceClosed": 2,
-        "atfaultClaimSetup": 70,
+        "atfaultClaimSetup": 85,
         "negligenceClaimSetup": 24,
-        "total": 142,
+        "total": 157,
         "source": "자동 계산"
       }
     ],
