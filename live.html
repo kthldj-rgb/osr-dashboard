@@ -630,7 +630,7 @@ function renderOverdue(ot){
   document.getElementById('overdueListLabel').textContent = `접수번호 ${cases.length}건 (경과일수 많은 순)`;
   const chipsEl = document.getElementById('overdueChips');
   chipsEl.innerHTML = cases.length
-    ? cases.map(c=>`<span class="case-chip">${typeof c === 'string' ? c : c.case}${(typeof c === 'object' && c.days != null) ? ` (${c.days}일)` : ''}</span>`).join('')
+    ? cases.map(c=>`<span class="case-chip">${typeof c === 'string' ? c : (c.caseNumber ?? c.case)}${(typeof c === 'object' && c.days != null) ? ` (${c.days}일)` : ''}</span>`).join('')
     : '<span style="color:var(--txt-faint); font-size:12px;">7일 이상 경과건 없음</span>';
 }
 
