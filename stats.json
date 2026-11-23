@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T03:12:45.488Z",
+  "lastUpdated": "2026-11-23T04:10:59.154813Z",
   "totals": {
     "totalRuns": 58,
     "uniqueCases": 4950,
@@ -57,7 +57,6 @@
     },
     {
       "date": "2026-10-02",
-      "phase": "auto",
       "count": 140,
       "caseNumbers": [
         "20261002A00153",
@@ -200,11 +199,11 @@
         "20261002A00003",
         "20261002A00002",
         "20261002A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-03",
-      "phase": "auto",
       "count": 24,
       "caseNumbers": [
         "20261003A00029",
@@ -231,11 +230,11 @@
         "20261003A00006",
         "20261003A00003",
         "20261003A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-04",
-      "phase": "auto",
       "count": 15,
       "caseNumbers": [
         "20261004A00018",
@@ -253,11 +252,11 @@
         "20261004A00004",
         "20261004A00003",
         "20261004A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-05",
-      "phase": "auto",
       "count": 33,
       "caseNumbers": [
         "20261005A00037",
@@ -293,11 +292,11 @@
         "20261005A00003",
         "20261005A00002",
         "20261005A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-06",
-      "phase": "auto",
       "count": 251,
       "caseNumbers": [
         "20261006A00275",
@@ -505,8 +504,8 @@
         "20261006A00055",
         "20261006A00053",
         "20261006A00052",
-        "20261006A00051",
         "20261006A00050",
+        "20261006A00051",
         "20261006A00049",
         "20261006A00047",
         "20261006M00003",
@@ -551,11 +550,11 @@
         "20261006A00003",
         "20261006A00002",
         "20261006A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-07",
-      "phase": "auto",
       "count": 163,
       "caseNumbers": [
         "20261007A00195",
@@ -721,11 +720,11 @@
         "20261007A00004",
         "20261007A00002",
         "20261007A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-08",
-      "phase": "auto",
       "count": 157,
       "caseNumbers": [
         "20261008A00183",
@@ -838,8 +837,8 @@
         "20261008A00062",
         "20261008A00061",
         "20261008A00060",
-        "20261008A00059",
         "20261008A00058",
+        "20261008A00059",
         "20261008A00056",
         "20261008A00057",
         "20261008A00055",
@@ -885,11 +884,11 @@
         "20261008A00003",
         "20261008A00002",
         "20261008A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-09",
-      "phase": "auto",
       "count": 32,
       "caseNumbers": [
         "20261009A00037",
@@ -924,11 +923,11 @@
         "20261009A00003",
         "20261009A00002",
         "20261009A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-10",
-      "phase": "auto",
       "count": 23,
       "caseNumbers": [
         "20261010A00029",
@@ -954,11 +953,11 @@
         "20261010A00003",
         "20261010A00002",
         "20261010A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-11",
-      "phase": "auto",
       "count": 21,
       "caseNumbers": [
         "20261011A00025",
@@ -982,11 +981,11 @@
         "20261011A00004",
         "20261011A00002",
         "20261011A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-12",
-      "phase": "auto",
       "count": 288,
       "caseNumbers": [
         "20261012A00336",
@@ -1133,8 +1132,8 @@
         "20261012A00170",
         "20261012A00169",
         "20261012A00168",
-        "20261012A00167",
         "20261012A00166",
+        "20261012A00167",
         "20261012A00165",
         "20261012A00164",
         "20261012A00162",
@@ -1183,8 +1182,8 @@
         "20261012A00112",
         "20261012A00111",
         "20261012A00110",
-        "20261012A00109",
         "20261012A00108",
+        "20261012A00109",
         "20261012A00107",
         "20261012A00106",
         "20261012A00105",
@@ -1277,11 +1276,11 @@
         "20261012A00005",
         "20261012A00003",
         "20261012A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-13",
-      "phase": "auto",
       "count": 158,
       "caseNumbers": [
         "20261013A00186",
@@ -1442,11 +1441,11 @@
         "20261013A00004",
         "20261013A00002",
         "20261013A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-14",
-      "phase": "auto",
       "count": 146,
       "caseNumbers": [
         "20261014A00165",
@@ -1595,11 +1594,11 @@
         "20261014A00003",
         "20261014A00002",
         "20261014A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-15",
-      "phase": "auto",
       "count": 134,
       "caseNumbers": [
         "20261015A00149",
@@ -1709,8 +1708,8 @@
         "20261015A00035",
         "20261015A00034",
         "20261015A00032",
-        "20261015A00031",
         "20261015A00030",
+        "20261015A00031",
         "20261015A00029",
         "20261015A00028",
         "20261015A00027",
@@ -1736,11 +1735,11 @@
         "20261015A00004",
         "20261015A00003",
         "20261015A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-16",
-      "phase": "auto",
       "count": 131,
       "caseNumbers": [
         "20261016A00153",
@@ -1874,11 +1873,11 @@
         "20261016A00003",
         "20261016A00002",
         "20261016A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-17",
-      "phase": "auto",
       "count": 34,
       "caseNumbers": [
         "20261017A00039",
@@ -1915,11 +1914,11 @@
         "20261017A00003",
         "20261017A00002",
         "20261017A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-18",
-      "phase": "auto",
       "count": 17,
       "caseNumbers": [
         "20261018A00018",
@@ -1939,11 +1938,11 @@
         "20261018A00003",
         "20261018A00002",
         "20261018A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-19",
-      "phase": "auto",
       "count": 198,
       "caseNumbers": [
         "20261019A00229",
@@ -2118,8 +2117,8 @@
         "20261019A00039",
         "20261019A00038",
         "20261019A00037",
-        "20261019A00033",
         "20261019A00034",
+        "20261019A00033",
         "20261019A00032",
         "20261019A00031",
         "20261019A00030",
@@ -2144,11 +2143,11 @@
         "20261019A00006",
         "20261019A00005",
         "20261019A00004"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-20",
-      "phase": "auto",
       "count": 130,
       "caseNumbers": [
         "20261020A00147",
@@ -2281,11 +2280,11 @@
         "20261020A00003",
         "20261020A00002",
         "20261020A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-21",
-      "phase": "auto",
       "count": 138,
       "caseNumbers": [
         "20261021A00167",
@@ -2426,11 +2425,11 @@
         "20261021A00004",
         "20261021A00003",
         "20261021A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-22",
-      "phase": "auto",
       "count": 120,
       "caseNumbers": [
         "20261022A00146",
@@ -2553,11 +2552,11 @@
         "20261022A00004",
         "20261022A00003",
         "20261022A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-23",
-      "phase": "auto",
       "count": 117,
       "caseNumbers": [
         "20261023A00150",
@@ -2677,11 +2676,11 @@
         "20261023A00004",
         "20261023A00003",
         "20261023A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-24",
-      "phase": "auto",
       "count": 28,
       "caseNumbers": [
         "20261024A00035",
@@ -2712,11 +2711,11 @@
         "20261024A00006",
         "20261024A00002",
         "20261024A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-25",
-      "phase": "auto",
       "count": 10,
       "caseNumbers": [
         "20261025A00012",
@@ -2729,11 +2728,11 @@
         "20261025A00004",
         "20261025A00003",
         "20261025A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-26",
-      "phase": "auto",
       "count": 218,
       "caseNumbers": [
         "20261105A00033",
@@ -2954,11 +2953,11 @@
         "20261026A00004",
         "20261026A00003",
         "20261026A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-27",
-      "phase": "auto",
       "count": 135,
       "caseNumbers": [
         "20261027A00170",
@@ -3096,11 +3095,11 @@
         "20261027A00004",
         "20261027A00003",
         "20261027A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-28",
-      "phase": "auto",
       "count": 123,
       "caseNumbers": [
         "20261028A00171",
@@ -3226,11 +3225,11 @@
         "20261028A00006",
         "20261028A00003",
         "20261028A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-29",
-      "phase": "auto",
       "count": 110,
       "caseNumbers": [
         "20261029A00143",
@@ -3343,11 +3342,11 @@
         "20261029A00003",
         "20261029A00002",
         "20261029A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-30",
-      "phase": "auto",
       "count": 116,
       "caseNumbers": [
         "20261030A00159",
@@ -3466,11 +3465,11 @@
         "20261030A00003",
         "20261030A00002",
         "20261030A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-10-31",
-      "phase": "auto",
       "count": 25,
       "caseNumbers": [
         "20261031A00043",
@@ -3498,11 +3497,11 @@
         "20261031A00003",
         "20261031A00002",
         "20261031A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-01",
-      "phase": "auto",
       "count": 16,
       "caseNumbers": [
         "20261101A00024",
@@ -3521,11 +3520,11 @@
         "20261101A00005",
         "20261101A00004",
         "20261101A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-02",
-      "phase": "auto",
       "count": 238,
       "caseNumbers": [
         "20261102A00287",
@@ -3766,11 +3765,11 @@
         "20261102A00004",
         "20261102A00003",
         "20261102A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-03",
-      "phase": "auto",
       "count": 136,
       "caseNumbers": [
         "20261103A00184",
@@ -3909,11 +3908,11 @@
         "20261103A00004",
         "20261103A00003",
         "20261103A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-04",
-      "phase": "auto",
       "count": 121,
       "caseNumbers": [
         "20261104A00162",
@@ -4037,11 +4036,11 @@
         "20261104A00003",
         "20261104A00002",
         "20261104A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-05",
-      "phase": "auto",
       "count": 107,
       "caseNumbers": [
         "20261105A00140",
@@ -4151,11 +4150,11 @@
         "20261105A00006",
         "20261105A00004",
         "20261105A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-06",
-      "phase": "auto",
       "count": 97,
       "caseNumbers": [
         "20261106A00143",
@@ -4255,11 +4254,11 @@
         "20261106A00004",
         "20261106A00002",
         "20261106A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-07",
-      "phase": "auto",
       "count": 29,
       "caseNumbers": [
         "20261107A00045",
@@ -4291,11 +4290,11 @@
         "20261107A00010",
         "20261107A00006",
         "20261107A00003"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-08",
-      "phase": "auto",
       "count": 10,
       "caseNumbers": [
         "20261108A00022",
@@ -4308,11 +4307,11 @@
         "20261108A00007",
         "20261108A00005",
         "20261108A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-09",
-      "phase": "auto",
       "count": 209,
       "caseNumbers": [
         "20261109A00264",
@@ -4524,11 +4523,11 @@
         "20261109A00005",
         "20261109A00004",
         "20261109A00003"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-10",
-      "phase": "auto",
       "count": 92,
       "caseNumbers": [
         "20261110A00152",
@@ -4623,11 +4622,11 @@
         "20261110A00005",
         "20261110A00004",
         "20261110A00003"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-11",
-      "phase": "auto",
       "count": 95,
       "caseNumbers": [
         "20261111A00158",
@@ -4725,11 +4724,11 @@
         "20261111A00005",
         "20261111A00003",
         "20261111A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-12",
-      "phase": "auto",
       "count": 87,
       "caseNumbers": [
         "20261112A00153",
@@ -4819,12 +4818,12 @@
         "20261112A00005",
         "20261112A00004",
         "20261112A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-13",
-      "phase": "auto",
-      "count": 59,
+      "count": 60,
       "caseNumbers": [
         "20261113A00136",
         "20261113A00135",
@@ -4849,6 +4848,7 @@
         "20261113A00088",
         "20261113A00086",
         "20261113A00085",
+        "20261113A00084",
         "20261113A00083",
         "20261113A00082",
         "20261113A00081",
@@ -4885,11 +4885,11 @@
         "20261113A00011",
         "20261113A00008",
         "20261113A00004"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-14",
-      "phase": "auto",
       "count": 7,
       "caseNumbers": [
         "20261114A00029",
@@ -4899,11 +4899,11 @@
         "20261114A00006",
         "20261114A00003",
         "20261114A00002"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-15",
-      "phase": "auto",
       "count": 9,
       "caseNumbers": [
         "20261115A00028",
@@ -4915,12 +4915,12 @@
         "20261115A00013",
         "20261115A00010",
         "20261115A00009"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-16",
-      "phase": "auto",
-      "count": 108,
+      "count": 109,
       "caseNumbers": [
         "20261116A00269",
         "20261116A00267",
@@ -4961,6 +4961,7 @@
         "20261116A00157",
         "20261116A00155",
         "20261116A00151",
+        "20261116A00150",
         "20261116A00149",
         "20261116A00148",
         "20261116A00146",
@@ -5030,24 +5031,27 @@
         "20261116A00007",
         "20261116A00006",
         "20261116A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-17",
-      "phase": "auto",
-      "count": 35,
+      "count": 38,
       "caseNumbers": [
         "20261117A00147",
         "20261117A00145",
         "20261117M00008",
+        "20261117A00143",
         "20261117A00137",
         "20261117A00135",
+        "20261117A00131",
         "20261117A00118",
         "20261117A00108",
         "20261117A00101",
         "20261117A00098",
         "20261117A00094",
         "20261117A00093",
+        "20261117A00092",
         "20261117A00089",
         "20261117A00085",
         "20261117A00083",
@@ -5072,11 +5076,11 @@
         "20261117A00015",
         "20261117A00006",
         "20261117A00001"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-18",
-      "phase": "auto",
       "count": 25,
       "caseNumbers": [
         "20261118A00145",
@@ -5104,11 +5108,11 @@
         "20261118A00022",
         "20261118A00014",
         "20261118A00005"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-19",
-      "phase": "auto",
       "count": 6,
       "caseNumbers": [
         "20261119A00143",
@@ -5117,23 +5121,24 @@
         "20261119A00039",
         "20261119A00020",
         "20261119A00019"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-20",
-      "phase": "auto",
       "count": 1,
       "caseNumbers": [
         "20261120A00004"
-      ]
+      ],
+      "phase": "auto"
     },
     {
       "date": "2026-11-21",
-      "phase": "auto",
       "count": 1,
       "caseNumbers": [
         "20261121A00005"
-      ]
+      ],
+      "phase": "auto"
     }
   ],
   "runs": [
@@ -5740,197 +5745,236 @@
     {
       "id": "daily-2026-10-14",
       "date": "2026-10-14",
-      "count": 146
+      "count": 146,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-15",
       "date": "2026-10-15",
-      "count": 134
+      "count": 134,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-16",
       "date": "2026-10-16",
-      "count": 131
+      "count": 131,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-17",
       "date": "2026-10-17",
-      "count": 34
+      "count": 34,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-18",
       "date": "2026-10-18",
-      "count": 17
+      "count": 17,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-19",
       "date": "2026-10-19",
-      "count": 198
+      "count": 198,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-20",
       "date": "2026-10-20",
-      "count": 130
+      "count": 130,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-21",
       "date": "2026-10-21",
-      "count": 138
+      "count": 138,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-22",
       "date": "2026-10-22",
-      "count": 120
+      "count": 120,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-23",
       "date": "2026-10-23",
-      "count": 117
+      "count": 117,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-24",
       "date": "2026-10-24",
-      "count": 28
+      "count": 28,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-25",
       "date": "2026-10-25",
-      "count": 10
+      "count": 10,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-26",
       "date": "2026-10-26",
-      "count": 218
+      "count": 218,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-27",
       "date": "2026-10-27",
-      "count": 135
+      "count": 135,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-28",
       "date": "2026-10-28",
-      "count": 123
+      "count": 123,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-29",
       "date": "2026-10-29",
-      "count": 110
+      "count": 110,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-30",
       "date": "2026-10-30",
-      "count": 116
+      "count": 116,
+      "source": "auto"
     },
     {
       "id": "daily-2026-10-31",
       "date": "2026-10-31",
-      "count": 25
+      "count": 25,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-01",
       "date": "2026-11-01",
-      "count": 16
+      "count": 16,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-02",
       "date": "2026-11-02",
-      "count": 238
+      "count": 238,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-03",
       "date": "2026-11-03",
-      "count": 136
+      "count": 136,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-04",
       "date": "2026-11-04",
-      "count": 121
+      "count": 121,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-05",
       "date": "2026-11-05",
-      "count": 107
+      "count": 107,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-06",
       "date": "2026-11-06",
-      "count": 97
+      "count": 97,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-07",
       "date": "2026-11-07",
-      "count": 29
+      "count": 29,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-08",
       "date": "2026-11-08",
-      "count": 10
+      "count": 10,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-09",
       "date": "2026-11-09",
-      "count": 209
+      "count": 209,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-10",
       "date": "2026-11-10",
-      "count": 92
+      "count": 92,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-11",
       "date": "2026-11-11",
-      "count": 95
+      "count": 95,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-12",
       "date": "2026-11-12",
-      "count": 87
+      "count": 87,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-13",
       "date": "2026-11-13",
-      "count": 59
+      "count": 60,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-14",
       "date": "2026-11-14",
-      "count": 7
+      "count": 7,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-15",
       "date": "2026-11-15",
-      "count": 9
+      "count": 9,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-16",
       "date": "2026-11-16",
-      "count": 108
+      "count": 109,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-17",
       "date": "2026-11-17",
-      "count": 35
+      "count": 38,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-18",
       "date": "2026-11-18",
-      "count": 25
+      "count": 25,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-19",
       "date": "2026-11-19",
-      "count": 6
+      "count": 6,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-20",
       "date": "2026-11-20",
-      "count": 1
+      "count": 1,
+      "source": "auto"
     },
     {
       "id": "daily-2026-11-21",
       "date": "2026-11-21",
-      "count": 1
+      "count": 1,
+      "source": "auto"
     }
   ],
   "handoffTracking": {
@@ -5941,39 +5985,39 @@
       "마스타"
     ],
     "cumulativeFinalized": {
-      "count": 4723,
-      "lastChecked": "2026-11-23T03:12:45.488Z"
+      "count": 4728,
+      "lastChecked": "2026-11-23T04:10:59.154813Z"
     },
     "pendingStaffFinalization": {
-      "count": 54,
+      "count": 53,
       "breakdown": {
-        "atfault": 6,
+        "atfault": 5,
         "negligence": 48
       },
-      "lastChecked": "2026-11-23T03:12:45.488Z"
+      "lastChecked": "2026-11-23T04:10:59.154813Z"
     },
     "categoryBreakdown": {
       "damage": {
         "finalized": 1705,
-        "pendingDocsOrOther": 364
+        "pendingDocsOrOther": 367
       },
       "atfault": {
-        "finalized": 2238,
-        "pendingStaffFinalization": 6
+        "finalized": 2243,
+        "pendingStaffFinalization": 5
       },
       "negligence": {
         "finalized": 780,
         "pendingStaffFinalization": 48
       }
     },
-    "indicatorA": 4723,
-    "indicatorB": 54,
-    "lastUpdated": "2026-11-23T03:12:45.488Z"
+    "indicatorA": 4728,
+    "indicatorB": 53,
+    "lastUpdated": "2026-11-23T04:10:59.154813Z"
   },
   "overdueTracking": {
-    "count": 129,
+    "count": 128,
     "breakdown": {
-      "과실": 45,
+      "과실": 44,
       "단독": 45,
       "정비": 8,
       "가해": 27,
@@ -5984,651 +6028,646 @@
     "cases": [
       {
         "caseNumber": "20261116A00240",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261029A00121",
-        "daysOverdue": 24,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 24
       },
       {
         "caseNumber": "20261106K00001",
-        "daysOverdue": 17,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 17
       },
       {
         "caseNumber": "20261026A00148",
-        "daysOverdue": 28,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261116A00270",
-        "daysOverdue": 7,
-        "accidentType": "정비"
+        "accType": "과실",
+        "days": 28
       },
       {
         "caseNumber": "20261101A00023",
-        "daysOverdue": 21,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 21
+      },
+      {
+        "caseNumber": "20261116A00270",
+        "accType": "정비",
+        "days": 7
       },
       {
         "caseNumber": "20261112A00076",
-        "daysOverdue": 11,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 11
       },
       {
         "caseNumber": "20261026A00115",
-        "daysOverdue": 28,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 28
       },
       {
         "caseNumber": "20261112A00097",
-        "daysOverdue": 11,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261112A00155",
-        "daysOverdue": 10,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261112A00141",
-        "daysOverdue": 11,
-        "accidentType": "과실"
+        "accType": "가해",
+        "days": 11
       },
       {
         "caseNumber": "20261113A00002",
-        "daysOverdue": 10,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 10
       },
       {
-        "caseNumber": "20261112J00001",
-        "daysOverdue": 11,
-        "accidentType": "단독"
+        "caseNumber": "20261112A00155",
+        "accType": "과실",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261112A00141",
+        "accType": "과실",
+        "days": 11
       },
       {
         "caseNumber": "20261106A00036",
-        "daysOverdue": 17,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 17
+      },
+      {
+        "caseNumber": "20261112J00001",
+        "accType": "단독",
+        "days": 11
       },
       {
         "caseNumber": "20261113A00020",
-        "daysOverdue": 10,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 10
       },
       {
         "caseNumber": "20261113A00033",
-        "daysOverdue": 10,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261105A00086",
-        "daysOverdue": 17,
-        "accidentType": "과실"
+        "accType": "단독",
+        "days": 10
       },
       {
         "caseNumber": "20261109A00120",
-        "daysOverdue": 14,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261105A00086",
+        "accType": "과실",
+        "days": 17
       },
       {
         "caseNumber": "20261107A00001",
-        "daysOverdue": 16,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 16
       },
       {
         "caseNumber": "20261028A00002",
-        "daysOverdue": 26,
-        "accidentType": "자차"
+        "accType": "자차",
+        "days": 26
       },
       {
         "caseNumber": "20261112A00149",
-        "daysOverdue": 11,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261015A00119",
-        "daysOverdue": 39,
-        "accidentType": "과실"
+        "accType": "가해",
+        "days": 11
       },
       {
         "caseNumber": "20261107A00030",
-        "daysOverdue": 16,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 16
+      },
+      {
+        "caseNumber": "20261015A00119",
+        "accType": "과실",
+        "days": 39
       },
       {
         "caseNumber": "20261112A00156",
-        "daysOverdue": 10,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261113A00043",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "과실",
+        "days": 10
       },
       {
         "caseNumber": "20261108A00012",
-        "daysOverdue": 15,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261113A00043",
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261109A00050",
-        "daysOverdue": 14,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 14
       },
       {
         "caseNumber": "20261106A00093",
-        "daysOverdue": 17,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 17
       },
       {
         "caseNumber": "20261112A00132",
-        "daysOverdue": 11,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261112A00099",
-        "daysOverdue": 11,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 11
       },
       {
         "caseNumber": "20261102A00034",
-        "daysOverdue": 21,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 21
+      },
+      {
+        "caseNumber": "20261112A00099",
+        "accType": "가해",
+        "days": 11
       },
       {
         "caseNumber": "20261113A00133",
-        "daysOverdue": 9,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 9
       },
       {
         "caseNumber": "20261107A00026",
-        "daysOverdue": 14,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 14
       },
       {
         "caseNumber": "20261028A00085",
-        "daysOverdue": 24,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 24
       },
       {
         "caseNumber": "20261024A00033",
-        "daysOverdue": 30,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 30
       },
       {
         "caseNumber": "20261115A00023",
-        "daysOverdue": 7,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261109A00086",
-        "daysOverdue": 14,
-        "accidentType": "단독"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261019A00036",
-        "daysOverdue": 35,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 35
+      },
+      {
+        "caseNumber": "20261109A00086",
+        "accType": "단독",
+        "days": 14
       },
       {
         "caseNumber": "20261113A00078",
-        "daysOverdue": 10,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 10
       },
       {
         "caseNumber": "20261028A00140",
-        "daysOverdue": 26,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261106A00126",
-        "daysOverdue": 16,
-        "accidentType": "과실"
+        "accType": "가해",
+        "days": 26
       },
       {
         "caseNumber": "20261030M00004",
-        "daysOverdue": 13,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 13
       },
       {
-        "caseNumber": "20261109A00121",
-        "daysOverdue": 14,
-        "accidentType": "단독"
+        "caseNumber": "20261106A00126",
+        "accType": "과실",
+        "days": 16
       },
       {
         "caseNumber": "20261102A00127",
-        "daysOverdue": 21,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 21
+      },
+      {
+        "caseNumber": "20261109A00121",
+        "accType": "단독",
+        "days": 14
       },
       {
         "caseNumber": "20261113A00025",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261114A00019",
-        "daysOverdue": 9,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261029A00081",
-        "daysOverdue": 25,
-        "accidentType": "과실"
+        "accType": "가해",
+        "days": 9
       },
       {
         "caseNumber": "20261113A00106",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261029A00081",
+        "accType": "과실",
+        "days": 25
       },
       {
         "caseNumber": "20261115A00003",
-        "daysOverdue": 8,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 8
       },
       {
         "caseNumber": "20261112A00154",
-        "daysOverdue": 9,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261102A00219",
-        "daysOverdue": 21,
-        "accidentType": "가해"
+        "accType": "과실",
+        "days": 9
       },
       {
         "caseNumber": "20261113A00130",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261102A00219",
+        "accType": "가해",
+        "days": 21
       },
       {
         "caseNumber": "20261102A00276",
-        "daysOverdue": 21,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 21
       },
       {
         "caseNumber": "20261113A00112",
-        "daysOverdue": 10,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 10
       },
       {
         "caseNumber": "20261013A00040",
-        "daysOverdue": 41,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261113A00099",
-        "daysOverdue": 10,
-        "accidentType": "단독"
+        "accType": "가해",
+        "days": 41
       },
       {
         "caseNumber": "20261114A00021",
-        "daysOverdue": 9,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 9
+      },
+      {
+        "caseNumber": "20261113A00099",
+        "accType": "단독",
+        "days": 10
       },
       {
         "caseNumber": "20261115A00004",
-        "daysOverdue": 8,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 8
       },
       {
         "caseNumber": "20261113A00123",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261110A00048",
-        "daysOverdue": 13,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 13
       },
       {
         "caseNumber": "20261022A00011",
-        "daysOverdue": 31,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 31
       },
       {
         "caseNumber": "20261110A00060",
-        "daysOverdue": 13,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 13
       },
       {
         "caseNumber": "20261115A00014",
-        "daysOverdue": 8,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 8
       },
       {
         "caseNumber": "20261110A00083",
-        "daysOverdue": 12,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261113A00131",
-        "daysOverdue": 10,
-        "accidentType": "가해"
+        "accType": "단독",
+        "days": 12
       },
       {
         "caseNumber": "20261109A00135",
-        "daysOverdue": 14,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261113A00131",
+        "accType": "가해",
+        "days": 10
       },
       {
         "caseNumber": "20261109M00011",
-        "daysOverdue": 13,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 13
       },
       {
         "caseNumber": "20261115A00001",
-        "daysOverdue": 8,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 8
       },
       {
         "caseNumber": "20261114A00005",
-        "daysOverdue": 9,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 9
       },
       {
         "caseNumber": "20261114A00009",
-        "daysOverdue": 9,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 9
       },
       {
         "caseNumber": "20261110A00103",
-        "daysOverdue": 13,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 13
       },
       {
         "caseNumber": "20261113A00048",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261115A00006",
-        "daysOverdue": 8,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261116A00274",
-        "daysOverdue": 7,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261116A00041",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 8
       },
       {
         "caseNumber": "20261111A00115",
-        "daysOverdue": 11,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261116A00274",
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00116",
-        "daysOverdue": 7,
-        "accidentType": "가해"
-      },
-      {
-        "caseNumber": "20261105A00089",
-        "daysOverdue": 18,
-        "accidentType": "과실"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261112A00073",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
-        "caseNumber": "20261110A00038",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "caseNumber": "20261105A00089",
+        "accType": "과실",
+        "days": 18
       },
       {
         "caseNumber": "20261023A00088",
-        "daysOverdue": 28,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 28
       },
       {
         "caseNumber": "20261104A00029",
-        "daysOverdue": 19,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 19
+      },
+      {
+        "caseNumber": "20261110A00038",
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00044",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261114A00012",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261103M00008",
-        "daysOverdue": 19,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 19
       },
       {
         "caseNumber": "20261030A00063",
-        "daysOverdue": 21,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 21
       },
       {
         "caseNumber": "20261116A00020",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00099",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00079",
-        "daysOverdue": 7,
-        "accidentType": "정비"
+        "accType": "정비",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00139",
-        "daysOverdue": 7,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261111A00001",
-        "daysOverdue": 12,
-        "accidentType": "자차"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261111A00054",
-        "daysOverdue": 12,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 12
       },
       {
         "caseNumber": "20261116A00147",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261111A00001",
+        "accType": "자차",
+        "days": 12
       },
       {
         "caseNumber": "20261116A00100",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261105A00082",
-        "daysOverdue": 17,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 17
       },
       {
         "caseNumber": "20261113A00041",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261030A00083",
-        "daysOverdue": 24,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261105A00044",
-        "daysOverdue": 18,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261110A00113",
-        "daysOverdue": 12,
-        "accidentType": "과실"
+        "accType": "단독",
+        "days": 24
       },
       {
         "caseNumber": "20261111A00131",
-        "daysOverdue": 12,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261110A00113",
+        "accType": "과실",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261105A00044",
+        "accType": "단독",
+        "days": 18
       },
       {
         "caseNumber": "20261116A00074",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00130",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261116A00117",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261110A00153",
-        "daysOverdue": 12,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 12
       },
       {
         "caseNumber": "20261116A00134",
-        "daysOverdue": 7,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261105A00036",
-        "daysOverdue": 12,
-        "accidentType": "단독"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261104A00011",
-        "daysOverdue": 19,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 19
       },
       {
         "caseNumber": "20261111A00055",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261105A00036",
+        "accType": "단독",
+        "days": 12
       },
       {
         "caseNumber": "20261116A00031",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261114M00002",
-        "daysOverdue": 7,
-        "accidentType": "미정"
+        "accType": "미정",
+        "days": 7
       },
       {
         "caseNumber": "20261106A00136",
-        "daysOverdue": 17,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 17
       },
       {
         "caseNumber": "20261111A00037",
-        "daysOverdue": 11,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 11
       },
       {
         "caseNumber": "20261116A00234",
-        "daysOverdue": 7,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 7
       },
       {
         "caseNumber": "20261111A00022",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261103A00162",
-        "daysOverdue": 18,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 18
       },
       {
         "caseNumber": "20261110A00101",
-        "daysOverdue": 12,
-        "accidentType": "가해"
+        "accType": "가해",
+        "days": 12
       },
       {
         "caseNumber": "20261112A00113",
-        "daysOverdue": 7,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 7
       },
       {
         "caseNumber": "20261104A00061",
-        "daysOverdue": 19,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 19
       },
       {
         "caseNumber": "20261111A00071",
-        "daysOverdue": 12,
-        "accidentType": "과실"
-      },
-      {
-        "caseNumber": "20261111A00062",
-        "daysOverdue": 12,
-        "accidentType": "단독"
-      },
-      {
-        "caseNumber": "20261116A00082",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "과실",
+        "days": 12
       },
       {
         "caseNumber": "20261104A00048",
-        "daysOverdue": 19,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 19
+      },
+      {
+        "caseNumber": "20261111A00062",
+        "accType": "단독",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261116A00082",
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261103A00075",
-        "daysOverdue": 20,
-        "accidentType": "가해자직불"
+        "accType": "가해자직불",
+        "days": 20
       },
       {
         "caseNumber": "20261116A00246",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261111A00074",
-        "daysOverdue": 12,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 12
       },
       {
         "caseNumber": "20261116A00247",
-        "daysOverdue": 7,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 7
       },
       {
         "caseNumber": "20261111A00099",
-        "daysOverdue": 12,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 12
       },
       {
         "caseNumber": "20261111A00111",
-        "daysOverdue": 12,
-        "accidentType": "단독"
+        "accType": "단독",
+        "days": 12
       },
       {
         "caseNumber": "20261111A00154",
-        "daysOverdue": 12,
-        "accidentType": "과실"
+        "accType": "과실",
+        "days": 12
       }
     ],
-    "lastUpdated": "2026-11-23T03:12:45.488Z"
+    "lastUpdated": "2026-11-23T04:10:59.154813Z"
   },
   "manualTrigger": {
     "damage": {
@@ -6654,11 +6693,11 @@
     }
   },
   "completionRateTracking": {
-    "A_total": 3062,
-    "finalized": 2240,
-    "pending": 822,
-    "completionRate": 73.15,
-    "lastUpdated": "2026-11-23T03:12:45.488Z"
+    "A_total": 3067,
+    "finalized": 2241,
+    "pending": 826,
+    "completionRate": 73.07,
+    "lastUpdated": "2026-11-23T04:10:59.154813Z"
   },
   "returnDelayTracking": {
     "note": "렌터카 반납 업로드 평균 지연 시간. 일자별로, 그날 반납일시에 해당하는 건들에 대해 max(반납완료 로그시각, 계약서저장 로그시각) - 반납일시(필드값)의 평균(분). 협력업체 전산입력 기강해이 확인용. 강현우 사원 요청으로 2026-11-09 추가, 매일 전일분을 배치로 계산.",
