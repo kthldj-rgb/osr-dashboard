@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T07:13:37.167Z",
+  "lastUpdated": "2026-11-23T07:17:03.832Z",
   "totals": {
     "totalRuns": 58,
     "uniqueCases": 4950,
@@ -6457,11 +6457,11 @@
       },
       {
         "date": "2026-11-23",
-        "damageClosed": 46,
-        "negligenceClosed": 4,
-        "atfaultClaimSetup": 119,
-        "negligenceClaimSetup": 22,
-        "total": 191,
+        "damageClosed": 47,
+        "negligenceClosed": 25,
+        "atfaultClaimSetup": 134,
+        "negligenceClaimSetup": 17,
+        "total": 223,
         "source": "자동 계산"
       }
     ],
