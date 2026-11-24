@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T05:20:06.236Z",
+  "lastUpdated": "2026-11-24T06:11:50.163Z",
   "totals": {
     "totalRuns": 58,
     "uniqueCases": 5401,
@@ -82,7 +82,7 @@
       "pausedAt": "2026-10-13T08:23:51.000Z",
       "deletedAt": null
     },
-    "checkedAt": "2026-11-24T05:20:06.236Z"
+    "checkedAt": "2026-11-24T06:11:50.163Z"
   },
   "daily": [
     {
@@ -585,8 +585,8 @@
         "20261006A00055",
         "20261006A00053",
         "20261006A00052",
-        "20261006A00050",
         "20261006A00051",
+        "20261006A00050",
         "20261006A00049",
         "20261006A00047",
         "20261006M00003",
@@ -1295,8 +1295,8 @@
         "20261012A00112",
         "20261012A00111",
         "20261012A00110",
-        "20261012A00109",
         "20261012A00108",
+        "20261012A00109",
         "20261012A00107",
         "20261012A00106",
         "20261012A00105",
@@ -1536,8 +1536,8 @@
         "20261013A00030",
         "20261013A00029",
         "20261013A00028",
-        "20261013M00001",
         "20261013A00027",
+        "20261013M00001",
         "20261013A00026",
         "20261013A00025",
         "20261013A00024",
@@ -2094,7 +2094,7 @@
     },
     {
       "date": "2026-10-19",
-      "count": 210,
+      "count": 211,
       "caseNumbers": [
         "20261019A00229",
         "20261019A00227",
@@ -2279,9 +2279,10 @@
         "20261019A00039",
         "20261019A00038",
         "20261019A00037",
+        "20261019A00036",
         "20261019A00035",
-        "20261019A00033",
         "20261019A00034",
+        "20261019A00033",
         "20261019A00032",
         "20261019A00031",
         "20261019A00030",
@@ -2359,8 +2360,8 @@
         "20261020A00098",
         "20261020A00097",
         "20261020M00009",
-        "20261020A00096",
         "20261020A00095",
+        "20261020A00096",
         "20261020A00094",
         "20261020A00093",
         "20261020A00091",
@@ -2615,7 +2616,7 @@
     },
     {
       "date": "2026-10-22",
-      "count": 127,
+      "count": 128,
       "caseNumbers": [
         "20261022A00147",
         "20261022A00146",
@@ -2735,6 +2736,7 @@
         "20261022A00014",
         "20261022A00013",
         "20261022A00012",
+        "20261022A00011",
         "20261022A00010",
         "20261022A00009",
         "20261022A00008",
@@ -6327,7 +6329,7 @@
     {
       "id": "daily-2026-10-19",
       "date": "2026-10-19",
-      "count": 210
+      "count": 211
     },
     {
       "id": "daily-2026-10-20",
@@ -6342,7 +6344,7 @@
     {
       "id": "daily-2026-10-22",
       "date": "2026-10-22",
-      "count": 127
+      "count": 128
     },
     {
       "id": "daily-2026-10-23",
@@ -6503,8 +6505,8 @@
       "마스타"
     ],
     "cumulativeFinalized": {
-      "count": 4960,
-      "lastChecked": "2026-11-24T05:20:06.236Z"
+      "count": 5023,
+      "lastChecked": "2026-11-24T06:11:50.163Z"
     },
     "pendingStaffFinalization": {
       "count": 8,
@@ -6512,38 +6514,685 @@
         "atfault": 3,
         "negligence": 5
       },
-      "lastChecked": "2026-11-24T05:20:06.236Z"
+      "lastChecked": "2026-11-24T06:11:50.163Z"
     },
     "categoryBreakdown": {
       "damage": {
-        "finalized": 1779,
-        "pendingDocsOrOther": 349
+        "finalized": 1829,
+        "pendingDocsOrOther": 753
       },
       "atfault": {
-        "finalized": 2325,
+        "finalized": 2332,
         "pendingStaffFinalization": 3
       },
       "negligence": {
-        "finalized": 856,
+        "finalized": 862,
         "pendingStaffFinalization": 5
       }
     },
-    "indicatorA": 4960,
+    "indicatorA": 5023,
     "indicatorB": 8,
-    "lastUpdated": "2026-11-24T05:20:06.236Z"
+    "lastUpdated": "2026-11-24T06:11:50.163Z"
   },
   "overdueTracking": {
-    "count": 134,
+    "count": 129,
     "breakdown": {
-      "단독": 46,
-      "가해": 32,
-      "정비": 8,
-      "과실": 44,
+      "단독": 45,
+      "가해": 31,
+      "정비": 7,
+      "과실": 42,
       "자차": 2,
       "미정": 1,
       "가해자직불": 1
     },
-    "lastUpdated": "2026-11-24T05:20:06.236Z"
+    "cases": [
+      {
+        "caseNumber": "20261013A00040",
+        "accType": "가해",
+        "days": 42
+      },
+      {
+        "caseNumber": "20261015A00119",
+        "accType": "과실",
+        "days": 40
+      },
+      {
+        "caseNumber": "20261024A00033",
+        "accType": "단독",
+        "days": 31
+      },
+      {
+        "caseNumber": "20261026A00148",
+        "accType": "과실",
+        "days": 29
+      },
+      {
+        "caseNumber": "20261028A00140",
+        "accType": "가해",
+        "days": 27
+      },
+      {
+        "caseNumber": "20261029A00081",
+        "accType": "과실",
+        "days": 26
+      },
+      {
+        "caseNumber": "20261029A00121",
+        "accType": "단독",
+        "days": 25
+      },
+      {
+        "caseNumber": "20261028A00085",
+        "accType": "과실",
+        "days": 25
+      },
+      {
+        "caseNumber": "20261030A00083",
+        "accType": "단독",
+        "days": 25
+      },
+      {
+        "caseNumber": "20261101A00023",
+        "accType": "단독",
+        "days": 22
+      },
+      {
+        "caseNumber": "20261102A00034",
+        "accType": "가해",
+        "days": 22
+      },
+      {
+        "caseNumber": "20261102A00219",
+        "accType": "가해",
+        "days": 22
+      },
+      {
+        "caseNumber": "20261030A00063",
+        "accType": "가해",
+        "days": 22
+      },
+      {
+        "caseNumber": "20261103A00075",
+        "accType": "가해자직불",
+        "days": 21
+      },
+      {
+        "caseNumber": "20261104A00029",
+        "accType": "단독",
+        "days": 20
+      },
+      {
+        "caseNumber": "20261103M00008",
+        "accType": "정비",
+        "days": 20
+      },
+      {
+        "caseNumber": "20261104A00011",
+        "accType": "단독",
+        "days": 20
+      },
+      {
+        "caseNumber": "20261105A00089",
+        "accType": "과실",
+        "days": 19
+      },
+      {
+        "caseNumber": "20261105A00044",
+        "accType": "단독",
+        "days": 19
+      },
+      {
+        "caseNumber": "20261106K00001",
+        "accType": "정비",
+        "days": 18
+      },
+      {
+        "caseNumber": "20261106A00036",
+        "accType": "단독",
+        "days": 18
+      },
+      {
+        "caseNumber": "20261106A00093",
+        "accType": "단독",
+        "days": 18
+      },
+      {
+        "caseNumber": "20261105A00082",
+        "accType": "가해",
+        "days": 18
+      },
+      {
+        "caseNumber": "20261107A00001",
+        "accType": "단독",
+        "days": 17
+      },
+      {
+        "caseNumber": "20261107A00030",
+        "accType": "과실",
+        "days": 17
+      },
+      {
+        "caseNumber": "20261106A00126",
+        "accType": "과실",
+        "days": 17
+      },
+      {
+        "caseNumber": "20261108A00012",
+        "accType": "가해",
+        "days": 16
+      },
+      {
+        "caseNumber": "20261109A00120",
+        "accType": "과실",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261109A00050",
+        "accType": "단독",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261107A00026",
+        "accType": "과실",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261109A00086",
+        "accType": "단독",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261109A00121",
+        "accType": "단독",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261109A00135",
+        "accType": "과실",
+        "days": 15
+      },
+      {
+        "caseNumber": "20261030M00004",
+        "accType": "정비",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261110A00048",
+        "accType": "과실",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261110A00060",
+        "accType": "과실",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261110A00103",
+        "accType": "가해",
+        "days": 14
+      },
+      {
+        "caseNumber": "20261110A00083",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00054",
+        "accType": "과실",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00131",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261110A00113",
+        "accType": "과실",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261110A00153",
+        "accType": "가해",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261105A00036",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261110A00101",
+        "accType": "가해",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00071",
+        "accType": "과실",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00062",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00074",
+        "accType": "과실",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00099",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00154",
+        "accType": "과실",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261111A00111",
+        "accType": "단독",
+        "days": 13
+      },
+      {
+        "caseNumber": "20261112A00141",
+        "accType": "과실",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261112J00001",
+        "accType": "단독",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261112A00132",
+        "accType": "가해",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261111A00115",
+        "accType": "과실",
+        "days": 12
+      },
+      {
+        "caseNumber": "20261112A00155",
+        "accType": "과실",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261113A00002",
+        "accType": "단독",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261113A00020",
+        "accType": "과실",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261113A00112",
+        "accType": "정비",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261113A00131",
+        "accType": "가해",
+        "days": 11
+      },
+      {
+        "caseNumber": "20261113A00133",
+        "accType": "과실",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261114A00019",
+        "accType": "가해",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261112A00154",
+        "accType": "과실",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261114A00021",
+        "accType": "과실",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261114A00005",
+        "accType": "과실",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261114A00009",
+        "accType": "단독",
+        "days": 10
+      },
+      {
+        "caseNumber": "20261115A00003",
+        "accType": "단독",
+        "days": 9
+      },
+      {
+        "caseNumber": "20261115A00004",
+        "accType": "과실",
+        "days": 9
+      },
+      {
+        "caseNumber": "20261115A00001",
+        "accType": "단독",
+        "days": 9
+      },
+      {
+        "caseNumber": "20261115A00006",
+        "accType": "과실",
+        "days": 9
+      },
+      {
+        "caseNumber": "20261116A00270",
+        "accType": "정비",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00043",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261115A00023",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00025",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00106",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00123",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00048",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00274",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00116",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261112A00073",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00044",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261114A00012",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00020",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00079",
+        "accType": "정비",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00139",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00147",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00100",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261113A00041",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00074",
+        "accType": "가해",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00134",
+        "accType": "과실",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261111A00055",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261111A00022",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261116A00246",
+        "accType": "단독",
+        "days": 8
+      },
+      {
+        "caseNumber": "20261117A00154",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00087",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00016",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00032",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261103A00166",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00133",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00130",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00054",
+        "accType": "자차",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00009",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00018",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00004",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261112A00137",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261114A00018",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261109A00180",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00193",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00061",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00111",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00074",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00220",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261113A00120",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00021",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00005",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00066",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00053",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00051",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00272",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00213",
+        "accType": "단독",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00028",
+        "accType": "미정",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00230",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00214",
+        "accType": "자차",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261116A00071",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00011",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00024",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117M00005",
+        "accType": "정비",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00107",
+        "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00073",
+        "accType": "가해",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261117A00071",
+        "accType": "과실",
+        "days": 7
+      }
+    ],
+    "lastUpdated": "2026-11-24T06:11:50.163Z"
   },
   "manualTrigger": {
     "damage": {
@@ -6569,11 +7218,11 @@
     }
   },
   "completionRateTracking": {
-    "A_total": 3140,
+    "A_total": 3145,
     "finalized": 2332,
-    "pending": 808,
-    "completionRate": 74.27,
-    "lastUpdated": "2026-11-24T05:20:06.236Z"
+    "pending": 813,
+    "completionRate": 74.15,
+    "lastUpdated": "2026-11-24T06:11:50.163Z"
   },
   "returnDelayTracking": {
     "note": "렌터카 반납 업로드 평균 지연 시간. 일자별로, 그날 반납일시에 해당하는 건들에 대해 max(반납완료 로그시각, 계약서저장 로그시각) - 반납일시(필드값)의 평균(분). 협력업체 전산입력 기강해이 확인용. 강현우 사원 요청으로 2026-11-09 추가, 매일 전일분을 배치로 계산.",
