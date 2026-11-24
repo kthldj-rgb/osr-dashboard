@@ -6735,7 +6735,8 @@
         "atfaultClaimSetup": 137,
         "negligenceClaimSetup": 20,
         "total": 250,
-        "source": "자동 계산"
+        "source": "자동 계산",
+        "note": "기준값(lastSnapshot)이 11/20 마감 시점에서 갱신되지 않은 채 멈춰있던 구조적 버그로 인해, 이 값은 순수 하루치가 아니라 11/20 이후 누적분이 섞여 있을 가능성이 높습니다(확인됨: 11/24 피해종결 120건 = 실제값과 기준값 차이 정확히 일치). 11/24 회차에서 기준값을 현재 실제값으로 리셋해 11/25부터는 정상적인 하루치로 계산됩니다."
       },
       {
         "date": "2026-11-24",
@@ -6744,17 +6745,18 @@
         "atfaultClaimSetup": 175,
         "negligenceClaimSetup": 57,
         "total": 430,
-        "source": "자동 계산"
+        "source": "자동 계산",
+        "note": "기준값(lastSnapshot)이 11/20 마감 시점에서 갱신되지 않은 채 멈춰있던 구조적 버그로 인해, 이 값은 순수 하루치가 아니라 11/20 이후 누적분이 섞여 있을 가능성이 높습니다(확인됨: 11/24 피해종결 120건 = 실제값과 기준값 차이 정확히 일치). 11/24 회차에서 기준값을 현재 실제값으로 리셋해 11/25부터는 정상적인 하루치로 계산됩니다."
       }
     ],
     "lastSnapshot": {
       "date": "2026-11-24",
-      "damage_finalized": 1659,
-      "atfault_finalized": 2146,
-      "negligence_finalized": 778,
-      "atfault_pending": 7,
-      "negligence_pending": 26,
-      "note": "2026-11-24 14:xx KST 첫 실행 때 갱신(지침대로 라벨만 변경, 숫자는 이전 값 그대로 유지). 참고: 11/23 09:05~13:05 트리거 공백으로 이번이 11/24 첫 실행이며, 숫자 기준값이 11/20 마감 시점에서 갱신되지 않아 이번 total(430)에는 11/20 이후 누적분이 일부 섞여 있을 수 있음(지침 그대로 따른 결과, 별도 수정 지시 없으면 유지)."
+      "damage_finalized": 1779,
+      "atfault_finalized": 2325,
+      "negligence_finalized": 856,
+      "atfault_pending": 3,
+      "negligence_pending": 5,
+      "note": "2026-11-24 14:58 KST 수동 리셋 - 기존 기준값이 11/20부터 멈춰있던 구조적 버그를 발견해 현재 실제값으로 리셋함. 11/25부터는 이 값을 기준으로 정상적인 하루치가 계산됨."
     }
   },
   "dataQualityFlags": []
