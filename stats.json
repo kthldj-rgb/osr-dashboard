@@ -6736,16 +6736,25 @@
         "negligenceClaimSetup": 20,
         "total": 250,
         "source": "자동 계산"
+      },
+      {
+        "date": "2026-11-24",
+        "damageClosed": 120,
+        "negligenceClosed": 78,
+        "atfaultClaimSetup": 175,
+        "negligenceClaimSetup": 57,
+        "total": 430,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "damage_finalized": 1659,
       "atfault_finalized": 2146,
       "negligence_finalized": 778,
       "atfault_pending": 7,
       "negligence_pending": 26,
-      "note": "2026-11-23 09:xx KST 첫 실행 때 갱신(주말 11/21~22 경과) - 11/20 마감(=11/23 시작) 기준값, 숫자는 11/19 스냅샷 그대로 유지. 다음날(11/24) 첫 실행에만 다시 갱신됨."
+      "note": "2026-11-24 14:xx KST 첫 실행 때 갱신(지침대로 라벨만 변경, 숫자는 이전 값 그대로 유지). 참고: 11/23 09:05~13:05 트리거 공백으로 이번이 11/24 첫 실행이며, 숫자 기준값이 11/20 마감 시점에서 갱신되지 않아 이번 total(430)에는 11/20 이후 누적분이 일부 섞여 있을 수 있음(지침 그대로 따른 결과, 별도 수정 지시 없으면 유지)."
     }
   },
   "dataQualityFlags": []
