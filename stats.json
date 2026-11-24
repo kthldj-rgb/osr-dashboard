@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T09:12:19.891Z",
+  "lastUpdated": "2026-11-24T22:11:13.608Z",
   "totals": {
     "totalRuns": 71,
     "uniqueCases": 5279,
@@ -7463,11 +7463,11 @@
       },
       {
         "date": "2026-11-24",
-        "damageClosed": 51,
+        "damageClosed": 71,
         "negligenceClosed": 6,
-        "atfaultClaimSetup": 30,
+        "atfaultClaimSetup": 40,
         "negligenceClaimSetup": 6,
-        "total": 93,
+        "total": 123,
         "source": "자동 계산",
         "note": "기준값(lastSnapshot)이 오늘 14:58 KST에 실제 현재값으로 리셋된 이후부터 지금까지의 누적 증분만 반영합니다."
       }
