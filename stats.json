@@ -7643,13 +7643,12 @@
       },
       {
         "date": "2026-11-25",
-        "damageClosed": 1,
+        "damageClosed": 2,
         "negligenceClosed": 0,
         "atfaultClaimSetup": 0,
         "negligenceClaimSetup": 0,
-        "total": 1,
-        "source": "자동 계산",
-        "note": "이번 회차(10:05)에서 indicatorA가 직전 대비 1건 감소하는 이상치가 발생함(dataQualityFlags 참고, atfault.finalized/negligence.finalized 각각 -1). 같은 날 기준값(lastSnapshot) 대비 비교라 그 영향이 이 total에도 그대로 반영되어 09:05 회차의 202에서 1로 크게 낮아짐 - 계산 오류가 아니라 재분류로 인한 자연스러운 결과로 추정."
+        "total": 2,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
