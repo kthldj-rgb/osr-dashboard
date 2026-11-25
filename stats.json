@@ -7591,11 +7591,11 @@
       },
       {
         "date": "2026-11-25",
-        "damageClosed": 7,
+        "damageClosed": 14,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 3,
+        "atfaultClaimSetup": 4,
         "negligenceClaimSetup": 0,
-        "total": 10,
+        "total": 18,
         "source": "자동 계산"
       }
     ],
