@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-25T05:10:56.536Z",
+  "lastUpdated": "2026-11-25T05:13:05.489Z",
   "totals": {
     "totalRuns": 71,
     "uniqueCases": 5133,
@@ -7411,11 +7411,10 @@
         "date": "2026-11-25",
         "damageClosed": 5,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 0,
+        "atfaultClaimSetup": 1,
         "negligenceClaimSetup": 0,
-        "total": 5,
-        "source": "자동 계산",
-        "note": "카테고리 재분류 영향 반영(지표A 총합 5130은 lastSnapshot 대비 불변 - damage.finalized+5/atfault.finalized-2/negligence.finalized-3 식의 카테고리간 이동 때문에 damageClosed 외 나머지가 0으로 클램핑됨, 계산 오류 아님). lastSnapshot은 오늘(09:05 회차) 기준값 그대로 유지, 숫자 안 건드림."
+        "total": 6,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
