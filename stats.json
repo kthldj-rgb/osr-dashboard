@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-25T05:13:05.489Z",
+  "lastUpdated": "2026-11-25T06:11:13.684Z",
   "totals": {
     "totalRuns": 71,
-    "uniqueCases": 5133,
+    "uniqueCases": 5135,
     "activeDays": 59,
     "projectStart": "2026-09-21",
     "automationStart": "2026-10-02"
@@ -82,7 +82,7 @@
       "pausedAt": "2026-10-13T08:23:51.000Z",
       "deletedAt": null
     },
-    "checkedAt": "2026-11-25T05:10:56.536Z"
+    "checkedAt": "2026-11-25T06:11:13.684Z"
   },
   "daily": [
     {
@@ -1208,8 +1208,8 @@
         "20261012A00170",
         "20261012A00169",
         "20261012A00168",
-        "20261012A00166",
         "20261012A00167",
+        "20261012A00166",
         "20261012A00165",
         "20261012A00164",
         "20261012A00162",
@@ -1259,8 +1259,8 @@
         "20261012A00112",
         "20261012A00111",
         "20261012A00110",
-        "20261012A00108",
         "20261012A00109",
+        "20261012A00108",
         "20261012A00107",
         "20261012A00106",
         "20261012A00105",
@@ -1798,8 +1798,8 @@
         "20261015A00035",
         "20261015A00034",
         "20261015A00032",
-        "20261015A00031",
         "20261015A00030",
+        "20261015A00031",
         "20261015A00029",
         "20261015A00028",
         "20261015A00027",
@@ -2217,8 +2217,8 @@
         "20261019A00037",
         "20261019A00036",
         "20261019A00035",
-        "20261019A00034",
         "20261019A00033",
+        "20261019A00034",
         "20261019A00032",
         "20261019A00031",
         "20261019A00030",
@@ -4318,7 +4318,7 @@
     },
     {
       "date": "2026-11-06",
-      "count": 104,
+      "count": 105,
       "caseNumbers": [
         "20261106A00143",
         "20261106A00138",
@@ -4367,6 +4367,7 @@
         "20261106A00077",
         "20261106A00076",
         "20261106A00075",
+        "20261106A00074",
         "20261106A00073",
         "20261106A00072",
         "20261106A00070",
@@ -5053,7 +5054,7 @@
     },
     {
       "date": "2026-11-13",
-      "count": 87,
+      "count": 88,
       "caseNumbers": [
         "20261113A00136",
         "20261113A00135",
@@ -5111,6 +5112,7 @@
         "20261113A00054",
         "20261113A00053",
         "20261113A00051",
+        "20261113A00048",
         "20261113A00047",
         "20261113A00046",
         "20261113A00045",
@@ -6397,7 +6399,7 @@
     {
       "id": "daily-2026-11-06",
       "date": "2026-11-06",
-      "count": 104
+      "count": 105
     },
     {
       "id": "daily-2026-11-07",
@@ -6432,7 +6434,7 @@
     {
       "id": "daily-2026-11-13",
       "date": "2026-11-13",
-      "count": 87
+      "count": 88
     },
     {
       "id": "daily-2026-11-14",
@@ -6488,8 +6490,8 @@
       "마스타"
     ],
     "cumulativeFinalized": {
-      "count": 5133,
-      "lastChecked": "2026-11-25T05:10:56.536Z"
+      "count": 5135,
+      "lastChecked": "2026-11-25T06:11:13.684Z"
     },
     "pendingStaffFinalization": {
       "count": 30,
@@ -6497,31 +6499,31 @@
         "atfault": 10,
         "negligence": 20
       },
-      "lastChecked": "2026-11-25T05:10:56.536Z"
+      "lastChecked": "2026-11-25T06:11:13.684Z"
     },
     "categoryBreakdown": {
       "damage": {
-        "finalized": 1889,
-        "pendingDocsOrOther": 348
+        "finalized": 1890,
+        "pendingDocsOrOther": 351
       },
       "atfault": {
-        "finalized": 2381,
+        "finalized": 2383,
         "pendingStaffFinalization": 10
       },
       "negligence": {
-        "finalized": 863,
+        "finalized": 862,
         "pendingStaffFinalization": 20
       }
     },
-    "indicatorA": 5133,
+    "indicatorA": 5135,
     "indicatorB": 30,
-    "lastUpdated": "2026-11-25T05:10:56.536Z"
+    "lastUpdated": "2026-11-25T06:11:13.684Z"
   },
   "overdueTracking": {
-    "count": 133,
+    "count": 130,
     "breakdown": {
-      "단독": 41,
-      "가해": 30,
+      "단독": 39,
+      "가해": 29,
       "정비": 9,
       "과실": 49,
       "자차": 2,
@@ -6715,13 +6717,13 @@
         "days": 14
       },
       {
-        "caseNumber": "20261111A00099",
-        "accType": "단독",
+        "caseNumber": "20261111A00074",
+        "accType": "과실",
         "days": 14
       },
       {
-        "caseNumber": "20261111A00074",
-        "accType": "과실",
+        "caseNumber": "20261111A00099",
+        "accType": "단독",
         "days": 14
       },
       {
@@ -6750,13 +6752,13 @@
         "days": 13
       },
       {
-        "caseNumber": "20261113A00002",
-        "accType": "단독",
+        "caseNumber": "20261112A00155",
+        "accType": "과실",
         "days": 12
       },
       {
-        "caseNumber": "20261112A00155",
-        "accType": "과실",
+        "caseNumber": "20261113A00002",
+        "accType": "단독",
         "days": 12
       },
       {
@@ -6850,6 +6852,11 @@
         "days": 9
       },
       {
+        "caseNumber": "20261116A00020",
+        "accType": "과실",
+        "days": 9
+      },
+      {
         "caseNumber": "20261116A00079",
         "accType": "정비",
         "days": 9
@@ -6860,17 +6867,12 @@
         "days": 9
       },
       {
-        "caseNumber": "20261116A00020",
+        "caseNumber": "20261116A00100",
         "accType": "과실",
         "days": 9
       },
       {
         "caseNumber": "20261116A00147",
-        "accType": "과실",
-        "days": 9
-      },
-      {
-        "caseNumber": "20261116A00100",
         "accType": "과실",
         "days": 9
       },
@@ -6910,22 +6912,17 @@
         "days": 8
       },
       {
-        "caseNumber": "20261117A00087",
-        "accType": "단독",
-        "days": 8
-      },
-      {
         "caseNumber": "20261117A00016",
         "accType": "가해",
         "days": 8
       },
       {
-        "caseNumber": "20261117A00130",
+        "caseNumber": "20261116A00133",
         "accType": "단독",
         "days": 8
       },
       {
-        "caseNumber": "20261116A00133",
+        "caseNumber": "20261117A00130",
         "accType": "단독",
         "days": 8
       },
@@ -7015,12 +7012,12 @@
         "days": 8
       },
       {
-        "caseNumber": "20261117A00073",
+        "caseNumber": "20261116A00071",
         "accType": "가해",
         "days": 8
       },
       {
-        "caseNumber": "20261116A00071",
+        "caseNumber": "20261117A00073",
         "accType": "가해",
         "days": 8
       },
@@ -7095,12 +7092,7 @@
         "days": 7
       },
       {
-        "caseNumber": "20261118A00052",
-        "accType": "가해",
-        "days": 7
-      },
-      {
-        "caseNumber": "20261118A00009",
+        "caseNumber": "20261117A00151",
         "accType": "가해",
         "days": 7
       },
@@ -7110,7 +7102,7 @@
         "days": 7
       },
       {
-        "caseNumber": "20261117A00151",
+        "caseNumber": "20261118A00009",
         "accType": "가해",
         "days": 7
       },
@@ -7122,11 +7114,6 @@
       {
         "caseNumber": "20261118A00028",
         "accType": "가해",
-        "days": 7
-      },
-      {
-        "caseNumber": "20261117A00119",
-        "accType": "단독",
         "days": 7
       },
       {
@@ -7145,13 +7132,13 @@
         "days": 7
       },
       {
-        "caseNumber": "20261117A00149",
-        "accType": "과실",
+        "caseNumber": "20261118M00014",
+        "accType": "정비",
         "days": 7
       },
       {
-        "caseNumber": "20261118M00014",
-        "accType": "정비",
+        "caseNumber": "20261117A00149",
+        "accType": "과실",
         "days": 7
       },
       {
@@ -7165,11 +7152,6 @@
         "days": 7
       },
       {
-        "caseNumber": "20261118M00013",
-        "accType": "정비",
-        "days": 7
-      },
-      {
         "caseNumber": "20261118M00011",
         "accType": "자차",
         "days": 7
@@ -7177,6 +7159,11 @@
       {
         "caseNumber": "20261118A00095",
         "accType": "과실",
+        "days": 7
+      },
+      {
+        "caseNumber": "20261118M00013",
+        "accType": "정비",
         "days": 7
       },
       {
@@ -7195,7 +7182,7 @@
         "days": 7
       }
     ],
-    "lastUpdated": "2026-11-25T05:10:56.536Z"
+    "lastUpdated": "2026-11-25T06:11:13.684Z"
   },
   "manualTrigger": {
     "damage": {
@@ -7221,11 +7208,11 @@
     }
   },
   "completionRateTracking": {
-    "A_total": 3214,
-    "finalized": 2397,
-    "pending": 817,
-    "completionRate": 74.58,
-    "lastUpdated": "2026-11-25T05:10:56.536Z"
+    "A_total": 3218,
+    "finalized": 2398,
+    "pending": 820,
+    "completionRate": 74.52,
+    "lastUpdated": "2026-11-25T06:11:13.684Z"
   },
   "returnDelayTracking": {
     "note": "렌터카 반납 업로드 평균 지연 시간. 일자별로, 그날 반납일시에 해당하는 건들에 대해 max(반납완료 로그시각, 계약서저장 로그시각) - 반납일시(필드값)의 평균(분). 협력업체 전산입력 기강해이 확인용. 강현우 사원 요청으로 2026-11-09 추가, 매일 전일분을 배치로 계산.",
