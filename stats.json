@@ -7396,11 +7396,11 @@
       },
       {
         "date": "2026-11-25",
-        "damageClosed": 5,
+        "damageClosed": 6,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 1,
+        "atfaultClaimSetup": 3,
         "negligenceClaimSetup": 0,
-        "total": 6,
+        "total": 9,
         "source": "자동 계산"
       }
     ],
