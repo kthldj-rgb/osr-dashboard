@@ -7819,11 +7819,11 @@
       },
       {
         "date": "2026-11-26",
-        "damageClosed": 4,
+        "damageClosed": 7,
         "negligenceClosed": 28,
-        "atfaultClaimSetup": 28,
-        "negligenceClaimSetup": 1,
-        "total": 61,
+        "atfaultClaimSetup": 30,
+        "negligenceClaimSetup": 0,
+        "total": 65,
         "source": "자동 계산"
       }
     ],
