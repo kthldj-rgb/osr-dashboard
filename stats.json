@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-26T01:10:23.257Z",
+  "lastUpdated": "2026-11-26T01:13:04.961Z",
   "totals": {
     "totalRuns": 73,
     "uniqueCases": 5258,
@@ -7569,12 +7569,13 @@
       },
       {
         "date": "2026-11-26",
-        "damageClosed": 93,
-        "negligenceClosed": 14,
-        "atfaultClaimSetup": 70,
-        "negligenceClaimSetup": 22,
-        "total": 199,
-        "source": "자동 계산"
+        "damageClosed": 4,
+        "negligenceClosed": 9,
+        "atfaultClaimSetup": 0,
+        "negligenceClaimSetup": 0,
+        "total": 13,
+        "source": "자동 계산",
+        "note": "오전 급증했던 청구설정대기(가해/과실)가 낮시간 동안 처리되며 pending이 감소, 공식상 claimSetup이 0으로 클램핑돼 total이 직전(09:05, 199)보다 크게 낮아짐(정상, 재분류/처리 반영)."
       }
     ],
     "lastSnapshot": {
