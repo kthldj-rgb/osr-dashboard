@@ -1,5 +1,5 @@
 {
- "lastUpdated": "2026-11-26T00:40:18.699Z",
+ "lastUpdated": "2026-11-26T00:40:41.887Z",
  "totals": {
   "totalRuns": 73,
   "uniqueCases": 5245,
@@ -7760,15 +7760,24 @@
     "negligenceClaimSetup": 0,
     "total": 47,
     "source": "자동 계산"
+   },
+   {
+    "date": "2026-11-26",
+    "damageClosed": 93,
+    "negligenceClosed": 14,
+    "atfaultClaimSetup": 70,
+    "negligenceClaimSetup": 22,
+    "total": 199,
+    "source": "자동 계산"
    }
   ],
   "lastSnapshot": {
-   "date": "2026-11-25",
-   "damage_finalized": 1884,
-   "atfault_finalized": 2380,
-   "negligence_finalized": 866,
-   "atfault_pending": 10,
-   "negligence_pending": 20
+   "date": "2026-11-26",
+   "damage_finalized": 1977,
+   "atfault_finalized": 2388,
+   "negligence_finalized": 880,
+   "atfault_pending": 72,
+   "negligence_pending": 28
   }
  },
  "dataQualityFlags": [
