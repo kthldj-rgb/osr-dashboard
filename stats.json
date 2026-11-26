@@ -7794,12 +7794,11 @@
       {
         "date": "2026-11-26",
         "damageClosed": 4,
-        "negligenceClosed": 27,
-        "atfaultClaimSetup": 1,
+        "negligenceClosed": 25,
+        "atfaultClaimSetup": 14,
         "negligenceClaimSetup": 0,
-        "total": 32,
-        "source": "자동 계산",
-        "note": "negligenceClosed(27)이 크게 증가하고 negligenceClaimSetup이 0인 이유: negligence.pending이 28→1로 크게 줄고 negligence.finalized가 880→907로 거의 같은 폭(+27) 증가 - pending 상태였던 과실 청구설정 건들이 이번 회차 사이에 직원에 의해 실제 종결까지 완료된 것으로 추정(claimSetup 공식상 증감이 상쇄됨)."
+        "total": 43,
+        "source": "자동 계산"
       }
     ],
     "lastSnapshot": {
