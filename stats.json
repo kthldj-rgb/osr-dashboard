@@ -6988,8 +6988,24 @@
     }
   ],
   "handoffTracking": {
-    "indicatorA": 5604,
-    "indicatorB": 2,
+    "note": "2026-10-02부터 오픈마일+마스타 파트너사만 대상, OSR CS(종결처리)/RT(반납완료) Excel export를 Python으로 분석해 카테고리별(피해/가해/과실) 누적 지표. 집계방식: CS에서 종결건수=finalized, RT에서 총 청구금액 유효한 건=pending.",
+    "scopeSince": "2026-10-02",
+    "partners": [
+      "오픈마일",
+      "마스타"
+    ],
+    "cumulativeFinalized": {
+      "count": 5604,
+      "lastChecked": "2026-11-26T08:13:29.459Z"
+    },
+    "pendingStaffFinalization": {
+      "count": 2,
+      "breakdown": {
+        "atfault": 2,
+        "negligence": 0
+      },
+      "lastChecked": "2026-11-26T08:13:29.459Z"
+    },
     "categoryBreakdown": {
       "damage": {
         "finalized": 1994,
@@ -7004,6 +7020,8 @@
         "pendingStaffFinalization": 0
       }
     },
+    "indicatorA": 5604,
+    "indicatorB": 2,
     "lastUpdated": "2026-11-26T08:13:29.459Z"
   },
   "overdueTracking": {
