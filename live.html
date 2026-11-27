@@ -189,10 +189,12 @@
 
 <div id="dataQualityBanner" style="display:none; background:#3d1f1f; border-top:1px solid #7a3a3a; border-bottom:1px solid #7a3a3a; padding:14px 0;">
   <div class="wrap">
-    <div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:#ffb3b3;">
+    <div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:#ffb3b3; cursor:pointer;" id="dataQualityBannerHead">
       <span style="font-size:18px; line-height:1;">⚠️</span>
-      <div id="dataQualityBannerText"><b>데이터 품질 경고:</b> 일부 수치가 직전 대비 비정상적으로 변동해 확인이 필요합니다.</div>
+      <div id="dataQualityBannerText" style="flex:1;"><b>데이터 품질 경고:</b> 일부 수치가 직전 대비 비정상적으로 변동해 확인이 필요합니다.</div>
+      <span id="dataQualityToggle" style="font-size:12px; color:#ffb3b3; white-space:nowrap; text-decoration:underline;">자세히 보기 ▾</span>
     </div>
+    <div id="dataQualityBannerList" style="display:none; margin-top:12px; flex-direction:column; gap:8px; max-height:280px; overflow-y:auto;"></div>
   </div>
 </div>
 
@@ -738,8 +740,14 @@ function render(data){
   if(data.dataQualityFlags && data.dataQualityFlags.length){
     const banner = document.getElementById('dataQualityBanner');
     const bannerText = document.getElementById('dataQualityBannerText');
+    const bannerList = document.getElementById('dataQualityBannerList');
     banner.style.display = 'block';
-    bannerText.innerHTML = '<b>⚠️ 데이터 품질 경고 (' + data.dataQualityFlags.length + '건):</b> ' + data.dataQualityFlags.map(f => `[${f.date || ''}] ${f.metric || ''}: ${f.reason || ''}`).join(' &nbsp;|&nbsp; ');
+    const flags = [...data.dataQualityFlags].reverse();
+    bannerText.innerHTML = `<b>⚠️ 데이터 품질 경고 (${flags.length}건)</b> — 가장 최근: [${flags[0].date || ''}] ${flags[0].metric || ''}`;
+    bannerList.innerHTML = flags.map(f => `
+      <div style="background:rgba(0,0,0,.2); border-radius:8px; padding:10px 12px; font-size:13px; line-height:1.5;">
+        <b>[${f.date || ''}] ${f.metric || ''}</b><br>${f.reason || ''}
+      </div>`).join('');
   }
 
   if(data.dailyThroughput && data.dailyThroughput.daily && data.dailyThroughput.daily.length){
@@ -787,6 +795,14 @@ async function poll(){
     if(lastGoodData) render(lastGoodData);
   }
 }
+
+document.getElementById('dataQualityBannerHead').addEventListener('click', ()=>{
+  const list = document.getElementById('dataQualityBannerList');
+  const toggle = document.getElementById('dataQualityToggle');
+  const open = list.style.display === 'flex';
+  list.style.display = open ? 'none' : 'flex';
+  toggle.textContent = open ? '자세히 보기 ▾' : '접기 ▴';
+});
 
 poll();
 setInterval(poll, REFRESH_MS);
