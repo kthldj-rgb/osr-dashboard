@@ -7875,6 +7875,24 @@
       "atfault_finalized": 2551,
       "negligence_finalized": 937,
       "atfault_pending": 3,
+      "negligence_pending": 1,
+      "note": "2026-11-27부터 dayStartSnapshot/latestSnapshot 이중 구조로 대체됨 - 이 필드는 하위호환용으로만 유지, 새 계산은 dayStartSnapshot 기준."
+    },
+    "dayStartSnapshot": {
+      "date": "2026-11-27",
+      "damage_finalized": 2074,
+      "atfault_finalized": 2551,
+      "negligence_finalized": 937,
+      "atfault_pending": 3,
+      "negligence_pending": 1,
+      "note": "2026-11-27 14:xx KST 이중 스냅샷 구조 전환 시점에 생성 - 오늘 남은 회차는 이 시점부터 계산됨(오늘 278건 집계와는 별개 구간, 과거 기여분 손실 아님 - 278은 이미 note로 투명 공개됨)."
+    },
+    "latestSnapshot": {
+      "date": "2026-11-27",
+      "damage_finalized": 2074,
+      "atfault_finalized": 2551,
+      "negligence_finalized": 937,
+      "atfault_pending": 3,
       "negligence_pending": 1
     }
   },
