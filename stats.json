@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-27T04:43:10.000Z",
+  "lastUpdated": "2026-11-27T04:47:49.000Z",
   "totals": {
     "totalRuns": 74,
     "uniqueCases": 5562,
@@ -7850,15 +7850,25 @@
         "negligenceClaimSetup": 0,
         "total": 116,
         "source": "자동 계산"
+      },
+      {
+        "date": "2026-11-27",
+        "damageClosed": 97,
+        "negligenceClosed": 57,
+        "atfaultClaimSetup": 94,
+        "negligenceClaimSetup": 30,
+        "total": 278,
+        "source": "자동 계산",
+        "note": "직전 lastSnapshot이 2026-11-26(그날 09:05 리셋 값)로 남아있던 상태에서 11/27 09:05~13:29 PC 수면으로 트리거 공백이 생겨 당일 첫 정상 실행이 13:38에야 이뤄짐. 이 entry는 2026-11-26 09:05부터 지금까지(약 28시간, 11/26 하루 전체+11/27 현재까지)의 누적분을 포함하므로, 11/26 자체 entry(그날 18:05 기준 최종값)와 상당 부분 중복될 수 있음 - 구조적으로 day-boundary lastSnapshot이 11/26 09:05 이후 한 번도 갱신되지 않아 발생."
       }
     ],
     "lastSnapshot": {
-      "date": "2026-11-26",
-      "damage_finalized": 1977,
-      "atfault_finalized": 2388,
-      "negligence_finalized": 880,
-      "atfault_pending": 72,
-      "negligence_pending": 28
+      "date": "2026-11-27",
+      "damage_finalized": 2074,
+      "atfault_finalized": 2551,
+      "negligence_finalized": 937,
+      "atfault_pending": 3,
+      "negligence_pending": 1
     }
   },
   "dataQualityFlags": [
