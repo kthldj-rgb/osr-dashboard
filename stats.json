@@ -8014,11 +8014,11 @@
       },
       {
         "date": "2026-11-27",
-        "damageClosed": 9,
+        "damageClosed": 13,
         "negligenceClosed": 0,
-        "atfaultClaimSetup": 36,
+        "atfaultClaimSetup": 43,
         "negligenceClaimSetup": 0,
-        "total": 45,
+        "total": 56,
         "source": "자동 계산"
       }
     ],
@@ -8042,11 +8042,11 @@
     },
     "latestSnapshot": {
       "date": "2026-11-27",
-      "damage_finalized": 2083,
-      "atfault_finalized": 2587,
-      "negligence_finalized": 925,
+      "damage_finalized": 2087,
+      "atfault_finalized": 2594,
+      "negligence_finalized": 923,
       "atfault_pending": 3,
-      "negligence_pending": 2
+      "negligence_pending": 1
     }
   },
   "dataQualityFlags": []
